@@ -2,5 +2,5 @@
     font-family: 'FontAwesome';
 }
 
-#index .fragment { display: none; }
-#index .fragment.current-fragment { display: inherit; }
+#index .custom-fragment { display: none; }
+#index .custom-fragment.current-custom-fragment { display: inherit; }
