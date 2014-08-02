@@ -41,6 +41,20 @@ $selectionBackgroundColor: #134674;
     text-align: right;
 }
 
+.classpasclass {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.class {
+        color: green;
+    }
+
+    &.pasclass {
+        color: red;
+    }
+}
+
 
 
 // Theme template ------------------------------
@@ -48,6 +62,19 @@ $selectionBackgroundColor: #134674;
 // ---------------------------------------------
 
 
-.reveal section img {
-    border: 0;
+.reveal {
+    section img {
+        border: 0;
+    }
+
+    blockquote {
+        width: 85%;
+    }
+
+    .controls div {
+        opacity: .3;
+        &.enabled {
+            opacity: .5;
+        }
+    }
 }

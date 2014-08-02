@@ -9,6 +9,15 @@
 .txtright {
   text-align: right; }
 
+.classpasclass {
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .classpasclass.class {
+    color: green; }
+  .classpasclass.pasclass {
+    color: red; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -147,3 +156,9 @@ body {
 
 .reveal section img {
   border: 0; }
+.reveal blockquote {
+  width: 85%; }
+.reveal .controls div {
+  opacity: .3; }
+  .reveal .controls div.enabled {
+    opacity: .5; }
