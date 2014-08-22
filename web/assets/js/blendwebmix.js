@@ -34,3 +34,8 @@ Reveal.addEventListener('presentation-title', function () {
 
     window.setTimeout(callback, timeout);
 });
+
+Reveal.addEventListener('slidechanged', function (event) {
+    var toggleFragments = $(event.currentSlide).find('.toggle-fragment');
+    toggleFragments.addClass('fragment');
+});

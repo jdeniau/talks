@@ -77,4 +77,21 @@ $selectionBackgroundColor: #134674;
             opacity: .5;
         }
     }
+
+    .large {
+        font-size: 1.3em!important;
+    }
+    .small {
+        font-size: 0.8em!important;
+    }
+    .gray {
+        color: #444;
+    }
+
+    .signature {
+        font-size: 0.8em;
+        color: #555;
+        font-style: italic;
+        text-align: right;
+    }
 }
