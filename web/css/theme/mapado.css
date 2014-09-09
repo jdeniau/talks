@@ -154,6 +154,8 @@ body {
 .reveal .slide-number {
   color: #3b759e; }
 
+.reveal .vmiddle {
+  vertical-align: middle; }
 .reveal section img {
   border: 0; }
 .reveal blockquote {
