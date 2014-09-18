@@ -496,6 +496,36 @@
                             Class
                         </div>
                     </section>
+
+                    <section id="elasticsearch-aggs">
+                        <h2>ElasticSearch</h2>
+                        <h5>Requête</h5>
+                        <pre><code class="json">{
+    "query": { "simple_query_string": { "query": "hérisson" } },
+    "aggs": {
+        "top_rubric": {
+            "terms": {
+                "field": "rubric_id",
+                "size": 10
+            }
+        }
+    }
+}
+</code></pre>
+                        <h5>Réponse</h5>
+                        <pre><code class="json">    "aggregations" : {
+        "top_rubric" : {
+            "buckets" : [
+                { "key" : 118, "doc_count" : 55 },
+                { "key" : 16, "doc_count" : 34 },
+                { "key" : 288, "doc_count" : 26 },
+                { "key" : 78, "doc_count" : 25 }
+            ]
+        }
+    }
+</code></pre>
+                        <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.x/search-aggregations.html">elasticsearch.org</a>
+                    </section>
                 </section>
 
 
