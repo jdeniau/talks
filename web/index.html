@@ -528,6 +528,71 @@
                     </section>
                 </section>
 
+                <section>
+                    <section id="dates">
+                        <h1>
+                            <h1>Développeurs</h1>
+                            <h2>Trouvez les bonne date</h2>
+                        </h1>
+                    </section>
+
+                    <section id="date-liberation">
+                        <h2>Activité de la veille ?</h2>
+                        <img class="stretch" src="/assets/img/date/liberation.png">
+                        <img class="stretch" src="/assets/img/date/liberation-filter.png">
+                        <div class="fragment classpasclass pasclass">
+                            Pas class
+                        </div>
+                    </section>
+
+                    <section id="date-frandroid">
+                        <h2>Activité de la veille !</h2>
+                        <img class="stretch" src="/assets/img/date/frandroid.png">
+                        <img class="stretch" src="/assets/img/date/frandroid-filter.png">
+                        <div class="fragment classpasclass class">
+                            Class
+                        </div>
+                    </section>
+
+                    <section id="date-mapado">
+                        <h2>En fonction de la recherche</h2>
+
+                        <table>
+                            <tr>
+                                <td style="vertical-align: top">
+                                    <img class="stretch" src="/assets/img/date/mapado-all-dates.png">
+                                <td class="fragment">
+                                    <img class="stretch" src="/assets/img/date/mapado-soon.png">
+                                <td class="fragment">
+                                    <img class="stretch" src="/assets/img/date/mapado-dimanche.png">
+                            </tr>
+                        </table>
+
+                        <div class="fragment classpasclass class">
+                            Super class (et subjectif)
+                        </div>
+                    </section>
+
+                    <section id="date-php">
+                        <h2>Un petit exemple rapide</h2>
+                        <h5>(très rapide)</h5>
+                        <pre><code class="php">
+function humanDate($date) { 
+    $dateDiff = $date->diff(new \DateTime('00:00'));
+    if (!$dateDiff->invert && $dateDiff->d == 0) {
+        $output = 'Hier à ' . $date->format('H:i');
+    } else {
+        $output = $date->format('\L\e d/m \à H:i');
+    }
+}
+
+$articleDate = new \DateTime('yesterday 16:08');
+echo humanDate($articleDate);
+
+</code></pre>
+                    </section>
+                </section>
+
 
                 <section>
                     <h1>Des questions ?</h1>
