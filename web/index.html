@@ -560,11 +560,11 @@
                         <table>
                             <tr>
                                 <td style="vertical-align: top">
-                                    <img class="stretch" src="/assets/img/date/mapado-all-dates.png">
+                                    <img class="stretch" src="/assets/img/date/mapado-all-dates-filter.png">
                                 <td class="fragment">
-                                    <img class="stretch" src="/assets/img/date/mapado-soon.png">
+                                    <img class="stretch" src="/assets/img/date/mapado-soon-filter.png">
                                 <td class="fragment">
-                                    <img class="stretch" src="/assets/img/date/mapado-dimanche.png">
+                                    <img class="stretch" src="/assets/img/date/mapado-dimanche-filter.png">
                             </tr>
                         </table>
 
@@ -578,10 +578,13 @@
                         <h5>(très rapide)</h5>
                         <pre><code class="php">
 function humanDate($date) { 
+    // comparaison avec aujourd'hui
     $dateDiff = $date->diff(new \DateTime('00:00'));
     if (!$dateDiff->invert && $dateDiff->d == 0) {
+        // hier
         $output = 'Hier à ' . $date->format('H:i');
     } else {
+        // pas hier
         $output = $date->format('\L\e d/m \à H:i');
     }
 }
@@ -590,6 +593,93 @@ $articleDate = new \DateTime('yesterday 16:08');
 echo humanDate($articleDate);
 
 </code></pre>
+                    </section>
+                </section>
+
+
+                <section>
+                    <section id="refonte">
+                        <h1>
+                            <h1>Développeurs</h1>
+                            <h2>Refondez votre site</h2>
+                        </h1>
+                    </section>
+
+                    <section id="refonte-quote">
+                        <blockquote>
+                            &ldquo;On vient de changer de logiciel il n'y a pas longtemps,<br /> ça ne marche pas&rdquo;
+                        </blockquote>
+                        <div class="signature">
+                            <p>Mon banquier et mon assureur</p>
+                            <p class="small fragment">A chaque fois que je vais les voir</p>
+                        </div>
+                    </section>
+
+                    <section id="refonte-forum">
+                        <h2>Les moins content râlent</h2>
+
+                        <div class="small">
+                            <blockquote>
+                                &ldquo;
+                                Tu as sacrifié l'ergonomie au profit du design. J'aurais préféré que tu fasses l'inverse.<br>
+                                [...]Si quelqu'un connait un [autre site], j'apprécierais grandement qu'il me le fasse savoir.[...]
+                                &rdquo;
+                            </blockquote>
+                            <p class="signature">
+                                armycreator.net
+                            </p>
+
+                            <blockquote>
+                                &ldquo;
+                                [...] La nouvelle version du site et digne d'une page Skyblog d'un gosse de 15ans! [...]
+                                &rdquo;
+                            </blockquote>
+                            <p class="signature">
+                                jeuxvideo.fr
+                            </p>
+
+                            <blockquote>
+                                &ldquo;
+                                C'est juste moche, [...] banal et stérile[...]<br/>
+                                Adios originalité, bonjour rentabilité stérile [...]
+                                &rdquo;
+                            </blockquote>
+                            <p class="signature">
+                                jeuxvideo.com
+                            </p>
+
+                            <blockquote>
+                                &ldquo;
+                                Nouveau logo d'Airbnb : entre moqueries et accusations de plagiat[...]
+                                &rdquo;
+                            </blockquote>
+                            <p class="signature">
+                                airbnb.com
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="refonte-stats">
+                        <h3>armycreator.net (février 2014)</h3>
+                        <p>
+                        6 mois avant: 32 000 visites / mois<br />
+                        6 mois apres: 27 000 visites / mois<br />
+                        perte de visite: 15%
+                        </p>
+
+                        <br/>
+                        <h3>jeuxvideo.fr (octobre 2010)</h3>
+                        <p>
+                        6 mois avant: 6 000 000 sessions / mois<br/>
+                        6 mois apres: 5 100 000 sessions / mois<br/>
+                        perte de visiteur: 15%
+                        </p>
+                    </section>
+
+                    <section id="refonte-airbnb">
+                        <h2>Airbnb</h2>
+                        <img src="/assets/img/refonte/airbnb-boobs.jpg" class="stretch" />
+                        <img src="/assets/img/refonte/bearbnb.png" class="stretch" />
                     </section>
                 </section>
 
