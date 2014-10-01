@@ -39,3 +39,26 @@ Reveal.addEventListener('slidechanged', function (event) {
     var toggleFragments = $(event.currentSlide).find('.toggle-fragment');
     toggleFragments.addClass('fragment');
 });
+
+Reveal.addEventListener('slidechanged', function (event) {
+    $(event.currentSlide).find('[data-fade-to]').each(function (i, item) {
+        setTimeout(function() {
+            $(item)
+                .height($(item).height())
+                .width($(item).width())
+            ;
+            $(item).find('img').fadeOut();
+            var ni = $('<img />').attr('src', $(item).attr('data-fade-to'))
+                .addClass('fade')
+                .css({
+                    'z-index': 2
+                })
+                .hide()
+                .fadeIn()
+            ;
+            $(item).append(ni);
+        }, 2000);
+
+    });
+    toggleFragments.addClass('fragment');
+});

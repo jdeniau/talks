@@ -98,4 +98,22 @@ $selectionBackgroundColor: #134674;
         font-style: italic;
         text-align: right;
     }
+
+    .txtcenter {
+        text-align: center;
+    }
+
+    [data-fade-to] {
+        position: relative;
+        display: inline-block;
+        img {
+            display: block;
+        }
+        img.fade {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
 }
