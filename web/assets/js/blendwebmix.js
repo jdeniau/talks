@@ -42,20 +42,20 @@ Reveal.addEventListener('slidechanged', function (event) {
 
 Reveal.addEventListener('slidechanged', function (event) {
     $(event.currentSlide).find('[data-fade-to]').each(function (i, item) {
+        var oi = $(item).find('img');
+        oi.addClass('fade');
+
         setTimeout(function() {
             $(item)
                 .height($(item).height())
                 .width($(item).width())
             ;
-            $(item).find('img').fadeOut();
+            debugger;
             var ni = $('<img />').attr('src', $(item).attr('data-fade-to'))
-                .addClass('fade')
-                .css({
-                    'z-index': 2
-                })
-                .hide()
-                .fadeIn()
+                .addClass('fade-new')
+                .css({ 'margin-left': oi.css('margin-left') })
             ;
+            oi.fadeOut('slow');
             $(item).append(ni);
         }, 2000);
 

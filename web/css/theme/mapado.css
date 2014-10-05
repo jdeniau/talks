@@ -183,9 +183,17 @@ body {
   .reveal [data-fade-to] img {
     display: block; }
   .reveal [data-fade-to] img.fade {
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto; }
+  .reveal [data-fade-to] img.fade-new {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1; }
+.reveal strike {
+  text-decoration: none;
+  background-image: linear-gradient(transparent 56%, #000 56%, #000 64%, transparent 64%); }
 
 /*# sourceMappingURL=mapado.css.map */

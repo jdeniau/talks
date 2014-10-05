@@ -48,7 +48,7 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-                <section>
+                <section id="welcome-blend">
                     <img src="/assets/img/logo-blend.jpg" class="stretch" />
                 </section>
 
@@ -62,15 +62,15 @@
                         </p>
                         <p>
                             <span class="fa fa-building"></span>
-                            mapado.com
+                            <a href="http://www.mapado.com">mapado.com</a>
                         </p>
                         <p>
                             <span class="fa fa-twitter"></span>
-                            j_deniau
+                            <a href="http://www.twitter.com/j_deniau">j_deniau</a>
                         </p>
                         <p>
                             <span class="fa fa-github"></span>
-                            jdeniau
+                            <a href="http://www.github.com/jdeniau">jdeniau</a>
                         </p>
                     </section>
 
@@ -88,9 +88,9 @@
                         <p class="signature"> Environ tous ceux qui n'ont pas déjà quitté le site </p>
                     </section>
 
-                    <section id="subjective">
+                    <section id="objective">
                         <h1>Attention</h1>
-                        Cette conférence est 100% subjective !
+                        Cette conférence n'est pas 100% objective !
                     </section>
                 </section>
 
@@ -124,9 +124,7 @@
 
                     <section id="explain-bad">
                         <h1>Mauvaise UX</h1>
-                        <p>
                         <img src="assets/img/explain/bad-ux.jpg" class="stretch" />
-                        </p>
                         <p>
                             Un peu dur d'utilisation à deux.
                         </p>
@@ -137,9 +135,7 @@
 
                     <section id="explain-good">
                         <h1>Bonne UX</h1>
-                        <p>
                         <img src="assets/img/explain/good-ux.jpg" class="stretch" />
-                        </p>
                         <p>
                             Pas besoin d'explication précisant "tirer" ou "pousser"
                         </p>
@@ -150,7 +146,7 @@
 
                     <section id="explain-design-vs-ux">
                         <h2>L'UX, c'est le design, non ?</h2>
-                        <img src="assets/img/explain/design-vs-ux.jpg" class="stretch fragment" />
+                        <img src="assets/img/explain/design-vs-ux.jpg" class="stretch" />
                     </section>
 
                     <section id="explain-why">
@@ -230,6 +226,15 @@
                         </blockquote>
                         <p class="signature"> Moi </p>
                     </section>
+
+                    <section id="mobile-app-conclusion">
+                        <h2>
+                            Ciblez vos annonces
+                        </h2>
+                        <h4>
+                            Meilleur taux de clic, meilleur taux de rebond
+                        </h4>
+                    </section>
                 </section>
 
                 <!-- Cookie informational message -->
@@ -242,7 +247,7 @@
                     </section>
 
                     <section id="cookies-legal">
-                        <img src="assets/img/cookies/DontStealWookieCookies.jpg" />
+                        <img src="assets/img/cookies/DontStealWookieCookies.jpg" class="stretch" />
                         <blockquote>
                             &ldquo;(...), les internautes doivent être informés et donner leur consentement préalablement à l'insertion de traceurs. Ils doivent disposer d'une possibilité de <strong>choisir de ne pas être tracés</strong> lorsqu'ils visitent un site ou utilisent une application. (...)&rdquo;
                         </blockquote>
@@ -274,7 +279,7 @@
 
                     <section id="cookie-tacit-google">
                         <div data-fade-to="/assets/img/cookies/1-google-opacity.png">
-                            <img src="/assets/img/cookies/1-google.png" class="stretch" />
+                            <img src="/assets/img/cookies/1-google.png" />
                         </div>
                         <div class="fragment classpasclass class">
                             Super class
@@ -282,8 +287,9 @@
                     </section>
 
                     <section id="cookie-tacit-clubic">
-                        <img src="/assets/img/cookies/2-clubic.png" class="stretch" />
-                        <img src="/assets/img/cookies/2-clubic-opacity.png" class="stretch" />
+                        <div data-fade-to="/assets/img/cookies/2-clubic-opacity.png">
+                            <img src="/assets/img/cookies/2-clubic.png" />
+                        </div>
                         <div class="fragment classpasclass class">
                             Class
                         </div>
@@ -291,16 +297,18 @@
 
                     <section id="cookie-tacit-20min">
                         <blockquote>Bonjour, j'aimerai le menu s'il vous plaît !</blockquote>
-                        <img src="/assets/img/cookies/3-20minutes.png" class="stretch" />
-                        <img src="/assets/img/cookies/3-20minutes-opacity.png" class="stretch" />
+                        <div data-fade-to="/assets/img/cookies/3-20minutes-opacity.png" class="stretch">
+                            <img src="/assets/img/cookies/3-20minutes.png" />
+                        </div>
                         <div class="fragment classpasclass pasclass">
                             Pas class
                         </div>
                     </section>
 
                     <section id="cookie-tacit-lemonde">
-                        <img src="/assets/img/cookies/4-lemonde.png" class="stretch" />
-                        <img src="/assets/img/cookies/4-lemonde-opacity.png" class="stretch" />
+                        <div data-fade-to="/assets/img/cookies/4-lemonde-opacity.png" class="stretch">
+                            <img src="/assets/img/cookies/4-lemonde.png" />
+                        </div>
                         <div class="fragment classpasclass pasclass">
                             Vraiment pas class
                         </div>
@@ -329,11 +337,11 @@
 
                     <section id="cookie-conclusion">
                         <h2>
-                            Suggestion:
-                        </h2>
-                        <h3>
                             Faites discret
-                        </h3>
+                        </h2>
+                        <h4>
+                            Ça n'intéresse que la CNIL
+                        </h4>
                     </section>
                 </section>
 
@@ -408,9 +416,9 @@
 
                     <section id="crop-what-we-not-want">
                         <h2>Que veut-on ?</h2>
-                        <img src="/assets/img/crop/woman.jpg" class="stretch" />
-                        &nbsp;&nbsp;&nbsp;
-                        <img src="/assets/img/crop/woman-bad-crop.jpg" class="stretch" />
+                        <div data-fade-to="/assets/img/crop/woman-bad-crop.jpg" class="stretch" >
+                            <img src="/assets/img/crop/woman.jpg" />
+                        </div>
                         <p class="signature">
                             © <a href="https://www.flickr.com/photos/anoldent/">anoldent @ Flickr</a>
                         </a>
@@ -421,9 +429,9 @@
 
                     <section id="crop-what-we-want">
                         <h2>Que veut-on ?</h2>
-                        <img src="/assets/img/crop/woman.jpg" class="stretch" />
-                        &nbsp;&nbsp;&nbsp;
-                        <img src="/assets/img/crop/woman-crop.jpg" class="stretch" />
+                        <div data-fade-to="/assets/img/crop/woman-crop.jpg" class="stretch" >
+                            <img src="/assets/img/crop/woman.jpg" />
+                        </div>
                         <p class="signature">
                             © <a href="https://www.flickr.com/photos/anoldent/">anoldent @ Flickr</a>
                         </a>
@@ -562,8 +570,9 @@
 
                     <section id="date-liberation">
                         <h2>Activité de la veille ?</h2>
-                        <img class="stretch" src="/assets/img/date/liberation.png">
-                        <img class="stretch" src="/assets/img/date/liberation-filter.png">
+                        <div data-fade-to="/assets/img/date/liberation-filter.png" class="stretch">
+                            <img src="/assets/img/date/liberation.png">
+                        </div>
                         <div class="fragment classpasclass pasclass">
                             Pas class
                         </div>
@@ -571,8 +580,9 @@
 
                     <section id="date-frandroid">
                         <h2>Activité de la veille !</h2>
-                        <img class="stretch" src="/assets/img/date/frandroid.png">
-                        <img class="stretch" src="/assets/img/date/frandroid-filter.png">
+                        <div data-fade-to="/assets/img/date/frandroid-filter.png" class="stretch">
+                            <img src="/assets/img/date/frandroid.png">
+                        </div>
                         <div class="fragment classpasclass class">
                             Class
                         </div>
@@ -581,16 +591,11 @@
                     <section id="date-mapado">
                         <h2>En fonction de la recherche</h2>
 
-                        <table>
-                            <tr>
-                                <td style="vertical-align: top">
-                                    <img class="stretch" src="/assets/img/date/mapado-all-dates-filter.png">
-                                <td class="fragment">
-                                    <img class="stretch" src="/assets/img/date/mapado-soon-filter.png">
-                                <td class="fragment">
-                                    <img class="stretch" src="/assets/img/date/mapado-dimanche-filter.png">
-                            </tr>
-                        </table>
+                        <div class="stretch">
+                            <img src="/assets/img/date/mapado-all-dates-filter.png">
+                            <img class="fragment" src="/assets/img/date/mapado-soon-filter.png">
+                            <img class="fragment" src="/assets/img/date/mapado-dimanche-filter.png">
+                        </div>
 
                         <div class="fragment classpasclass class">
                             Super class (et subjectif)
@@ -723,11 +728,27 @@ echo humanDate($articleDate);
                 </section>
 
 
-                <section id="questions">
-                    <h1>Merci</h1>
-                    <h3>Des questions ?</h3>
-                </section>
+                <section>
+                    <section id="tip">
+                        <p>
+                            &ldquo; Ne restez pas simple <strike>spectateurs</strike> développeurs &rdquo; :
+                        </p>
+                        <p>
+                            Utilisez votre produit
+                        </p>
+                    </section>
 
+                    <section id="questions">
+                        <h1>Merci</h1>
+                        <h3>Des questions ?</h3>
+                        <p class="signature">
+                            Julien Deniau 
+                        </p>
+                        <p class="signature">
+                            <span class="fa fa-twitter"></span> j_deniau
+                        </p>
+                    </section>
+                </section>
             </div>
 
         </div>
