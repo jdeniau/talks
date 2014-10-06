@@ -60,5 +60,4 @@ Reveal.addEventListener('slidechanged', function (event) {
         }, 2000);
 
     });
-    toggleFragments.addClass('fragment');
 });
