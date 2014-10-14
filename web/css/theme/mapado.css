@@ -66,11 +66,24 @@
 .classpasclass {
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; }
+  .classpasclass.coupled:first-child {
+    background-position: calc(50% - 250px) center; }
+  .classpasclass.coupled:last-child {
+    background-position: calc(50% + 250px) center; }
+  .classpasclass.perfect {
+    background-image: url(/assets/img/pad/perfect.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.class {
-    color: green; }
+    background-image: url(/assets/img/pad/boss.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.pasclass {
-    color: red; }
+    background-image: url(/assets/img/pad/nope.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+  .classpasclass.vraimentpasclass {
+    background-image: url(/assets/img/pad/what.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
 
 /*********************************************
  * GLOBAL STYLES

@@ -820,7 +820,7 @@ var Reveal = (function(){
 			// Subtract the height of each sibling
 			toArray( siblings ).forEach( function( sibling ) {
 
-				if( typeof sibling.offsetHeight === 'number' && sibling !== element ) {
+				if( typeof sibling.offsetHeight === 'number' && sibling !== element && !sibling.classList.contains('classpasclass')) {
 
 					var styles = window.getComputedStyle( sibling ),
 						marginTop = parseInt( styles.marginTop, 10 ),
