@@ -49,7 +49,7 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section id="welcome-blend">
-                    <img src="/assets/img/logo-blend.jpg" class="stretch" />
+                    <img src="/assets/img/logo-blend.jpg" class="stretch no-style" />
                 </section>
 
                 <section>
@@ -60,7 +60,7 @@
                             <li>
                                 <p>
                                     <span class="fa fa-briefcase"></span>
-                                    développeur web
+                                    Développeur web
                                 </p>
                             </li>
                             <li>
@@ -114,7 +114,7 @@
                         <h2 class="custom-fragment">Filtrez des résultats vide</h2>
                         <h2 class="custom-fragment">Videz vos paniers d'achat</h2>
                         <h2 class="custom-fragment">Hérissons > chats</h2>
-                        <h2 class="custom-fragment">Trouvez les bonne date</h2>
+                        <h2 class="custom-fragment">Trouvez les bonnes dates</h2>
                         <h2 class="custom-fragment">Améliorez votre SEO</h2>
                         <h2 class="custom-fragment">Refondez votre site</h2>
                         <h2 class="custom-fragment">Améliorez votre UX simplement !</h2>
@@ -164,7 +164,7 @@
                         <li><p>Téléchargement d'applications mobiles</p>
                         <li><p>Information sur les cookies</p>
                         <li><p>Crop d'image</p>
-                        <li><p>Filtrez de recherche</p>
+                        <li><p>Filtres de recherche</p>
                         <li><p>Affichage de date</p>
                         <li><p>Refonte de site</p>
                     </ul>
@@ -181,8 +181,10 @@
                     </section>
 
                     <section id="mobile-app-bad">
-                        <img src="assets/img/download-app/bad/le-parisien.png" />
-                        <img src="assets/img/download-app/bad/marmiton.png" />
+                        <div class="stretch">
+                            <img src="assets/img/download-app/bad/le-parisien.png" />
+                            <img src="assets/img/download-app/bad/marmiton.png" />
+                        </div>
                         <div class="fragment classpasclass pasclass">
                             Pas class
                         </div>
@@ -200,14 +202,16 @@
                     </section>
 
                     <section id="mobile-app-good">
-                        <div data-fade-to="assets/img/download-app/good/cityvox-opacity.png">
-                            <img src="assets/img/download-app/good/cityvox.png" />
-                        </div>
-                        <div data-fade-to="assets/img/download-app/good/nouvel-obs-opacity.png">
-                            <img src="assets/img/download-app/good/nouvel-obs.png" />
-                        </div>
-                        <div data-fade-to="assets/img/download-app/good/slideshare-opacity.png">
-                            <img src="assets/img/download-app/good/slideshare.png" />
+                        <div class="stretch">
+                            <div data-fade-to="assets/img/download-app/good/cityvox-opacity.png">
+                                <img src="assets/img/download-app/good/cityvox.png" />
+                            </div>
+                            <div data-fade-to="assets/img/download-app/good/nouvel-obs-opacity.png">
+                                <img src="assets/img/download-app/good/nouvel-obs.png" />
+                            </div>
+                            <div data-fade-to="assets/img/download-app/good/slideshare-opacity.png">
+                                <img src="assets/img/download-app/good/slideshare.png" />
+                            </div>
                         </div>
 
                         <div class="fragment classpasclass class">
@@ -216,11 +220,13 @@
                     </section>
 
                     <section id="mobile-app-best">
-                        <div data-fade-to="assets/img/download-app/good/frandroid-1-opacity.png">
-                            <img src="assets/img/download-app/good/frandroid-1.png" />
-                        </div>
-                        <div data-fade-to="assets/img/download-app/good/frandroid-2-opacity.png">
-                            <img src="assets/img/download-app/good/frandroid-2.png" />
+                        <div class="stretch">
+                            <div data-fade-to="assets/img/download-app/good/frandroid-1-opacity.png">
+                                <img src="assets/img/download-app/good/frandroid-1.png" />
+                            </div>
+                            <div data-fade-to="assets/img/download-app/good/frandroid-2-opacity.png">
+                                <img src="assets/img/download-app/good/frandroid-2.png" />
+                            </div>
                         </div>
                         <div class="fragment classpasclass class">
                             Super class
@@ -289,7 +295,7 @@
                     </section>
 
                     <section id="cookie-tacit-google">
-                        <div data-fade-to="/assets/img/cookies/1-google-opacity.png">
+                        <div data-fade-to="/assets/img/cookies/1-google-opacity.png" class="stretch">
                             <img src="/assets/img/cookies/1-google.png" />
                         </div>
                         <div class="fragment classpasclass class">
@@ -298,7 +304,7 @@
                     </section>
 
                     <section id="cookie-tacit-clubic">
-                        <div data-fade-to="/assets/img/cookies/2-clubic-opacity.png">
+                        <div data-fade-to="/assets/img/cookies/2-clubic-opacity.png" class="stretch">
                             <img src="/assets/img/cookies/2-clubic.png" />
                         </div>
                         <div class="fragment classpasclass class">
@@ -478,7 +484,7 @@
                     </section>
                     <section id="smartcrop-js">
                         <h3>JS: smartcrop.js</h3>
-                        <img class="stretch" src="/assets/img/crop/smartcropjs.png">
+                        <img class="stretch no-style" src="/assets/img/crop/smartcropjs.png">
                         <p><a href="https://github.com/jwagner/smartcrop.js">https://github.com/jwagner/smartcrop.js</a></p>
                         <pre><code class="javascript large">
   SmartCrop.crop(image, {width: 100, height: 100},
@@ -496,7 +502,8 @@
                         <a href="https://github.com/thumbor/thumbor"><img class="stretch" src="/assets/img/crop/thumbor.png"></a>
                         <p><a href="https://github.com/thumbor/thumbor">https://github.com/thumbor/thumbor</a></p>
                         <pre><code>
-    http://thumbor-server/hmac/trim/AxB:CxD/fit-in/-Ex-F/HALIGN/VALIGN/smart/filters:FILTERNAME(ARGUMENT):FILTERNAME(ARGUMENT)/image-uri
+    http://thumbor-server/hmac/trim/AxB:CxD/fit-in/-Ex-F/HALIGN/VALIGN/smart[...]
+            /filters:FILTERNAME(ARGUMENT):FILTERNAME(ARGUMENT)/image-uri
 
 </code></pre>
                     </section>
@@ -515,7 +522,7 @@
                     <section id="filter">
                         <h1>
                             <h1>Développeurs</h1>
-                            <h2>Filtrez des résultats vide</h2>
+                            <h2>Filtrez des résultats vides</h2>
                         </h1>
                     </section>
 
@@ -591,7 +598,7 @@
 
                     <section id="filter-conclusion">
                         <h3>Ne proposez pas ce que vous n'avez pas</h3>
-                        <h4>Utilisez ElasticSearch</h4>
+                        <h4>Utilisez ElasticSearch (ou faites beaucoup de requêtes SQL)</h4>
                     </section>
                 </section>
 
@@ -599,7 +606,7 @@
                     <section id="dates">
                         <h1>
                             <h1>Développeurs</h1>
-                            <h2>Trouvez les bonne date</h2>
+                            <h2>Trouvez les bonnes dates</h2>
                         </h1>
                     </section>
 
@@ -687,8 +694,20 @@ echo humanDate($articleDate);
                         </aside>
                     </section>
 
+                    <section id="refonte-clubic">
+                        <h2>Refonte de clubic.com en 2010</h2>
+                        <div class="stretch">
+                            <img src="/assets/img/refonte/clubic-before.png" class="w45 vmiddle" />
+                            →
+                            <img src="/assets/img/refonte/clubic-after.png" class="w45 vmiddle" />
+                        </div>
+                        <div class="fragment classpasclass pasclass">
+                            Pas class
+                        </div>
+                    </section>
+
                     <section id="refonte-forum">
-                        <h2>Les moins content râlent</h2>
+                        <h2>Les moins contents râlent</h2>
 
                         <div class="small">
                             <blockquote>
@@ -731,23 +750,6 @@ echo humanDate($articleDate);
                         </div>
                     </section>
 
-                    <section id="refonte-stats">
-                        <h3>armycreator.net (février 2014)</h3>
-                        <p>
-                        6 mois avant: 32 000 visites / mois<br />
-                        6 mois apres: 27 000 visites / mois<br />
-                        perte de visite: 15%
-                        </p>
-
-                        <br/>
-                        <h3>jeuxvideo.fr (octobre 2010)</h3>
-                        <p>
-                        6 mois avant: 6 000 000 sessions / mois<br/>
-                        6 mois apres: 5 100 000 sessions / mois<br/>
-                        perte de visiteur: 15%
-                        </p>
-                    </section>
-
                     <section id="refonte-airbnb">
                         <h2>Airbnb</h2>
                         <table class="stretch">
@@ -758,15 +760,30 @@ echo humanDate($articleDate);
                             <img src="/assets/img/refonte/bearbnb.png" class="stretch" />
                             </tr>
                         </table>
+                        <div class="fragment classpasclass pasclass">
+                            Pas class
+                        </div>
+                    </section>
+
+                    <section id="refonte-lbc">
+                        <h2>Refonte de leboncoin.fr en ????</h2>
+                        <div class="stretch">
+                            <img src="/assets/img/refonte/lbc-before.png" class="w45 vmiddle" />
+                            →
+                            <img src="/assets/img/refonte/lbc-after.png" class="w45 vmiddle" />
+                        </div>
+                        <div class="fragment classpasclass class">
+                            Pas class
+                        </div>
                     </section>
 
                     <section id="refonte-conclusion">
-                        <h3>
+                        <h2>
                             Évitez les refontes globales
+                        </h2>
+                        <h3>
+                            Soyez agiles : Soyez en constante mini-refonte
                         </h3>
-                        <h4>
-                            Soyez agiles: Soyez en constante mini-refonte
-                        </h4>
                     </section>
                 </section>
 
@@ -777,7 +794,7 @@ echo humanDate($articleDate);
                             Conclusion
                         </h2>
                         <p>
-                            &ldquo; Ne restez pas simple <strike>spectateurs</strike> développeurs &rdquo; :
+                            &ldquo; Ne restez pas simple <strike>spectateur</strike> développeur &rdquo; :
                         </p>
                         <ul>
                             <li> Utilisez votre produit

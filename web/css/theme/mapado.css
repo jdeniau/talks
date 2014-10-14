@@ -204,11 +204,18 @@ body {
 
 .reveal .vmiddle {
   vertical-align: middle; }
+.reveal .w45 {
+  width: 45%; }
+.reveal ul {
+  list-style-type: square; }
 .reveal ul.no-style {
   list-style-type: none;
   margin-left: 0; }
 .reveal section img {
   border: 0; }
+  .reveal section img.no-style {
+    background: none;
+    box-shadow: none; }
 .reveal blockquote {
   width: 85%; }
 .reveal .controls div {
@@ -231,7 +238,8 @@ body {
   text-align: center; }
 .reveal [data-fade-to] {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  height: 100%; }
   .reveal [data-fade-to] img {
     display: block; }
   .reveal [data-fade-to] img.fade {

@@ -69,6 +69,14 @@ $headingTextTransform: none;
         vertical-align: middle;
     }
 
+    .w45 {
+        width: 45%;
+    }
+
+    ul {
+        list-style-type: square;
+    }
+
     ul.no-style {
         list-style-type: none;
         margin-left: 0;
@@ -76,6 +84,11 @@ $headingTextTransform: none;
 
     section img {
         border: 0;
+
+        &.no-style {
+            background: none;
+            box-shadow: none;
+        }
     }
 
     blockquote {
@@ -114,6 +127,7 @@ $headingTextTransform: none;
     [data-fade-to] {
         position: relative;
         display: inline-block;
+        height: 100%;
         img {
             display: block;
         }
