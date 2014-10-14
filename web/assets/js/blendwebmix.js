@@ -50,7 +50,6 @@ Reveal.addEventListener('slidechanged', function (event) {
                 .height($(item).height())
                 .width($(item).width())
             ;
-            debugger;
             var ni = $('<img />').attr('src', $(item).attr('data-fade-to'))
                 .addClass('fade-new')
                 .css({ 'margin-left': oi.css('margin-left') })

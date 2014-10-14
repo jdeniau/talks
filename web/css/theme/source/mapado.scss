@@ -11,21 +11,23 @@
 
 
 // Include theme-specific fonts
+@import "fonts";
+
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
 
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'Lato', sans-serif;
-$mainColor: #333;
-$headingFont: 'Quicksand', sans-serif;
-$headingColor: #333;
+$headingFont: 'Proxima Nova', sans-serif;
+$mainColor: #424242;
+$headingColor: #424242;
 $headingLetterSpacing: -0.08em;
 $headingTextShadow: none;
-$backgroundColor: #f7fbfc;
+$backgroundColor: rgba(177,231,240,1);
 $linkColor: #3b759e;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #134674;
+$headingTextTransform: none;
 
 // Fix links so they are not cut off
 .reveal a:not(.image) {
@@ -34,7 +36,7 @@ $selectionBackgroundColor: #134674;
 
 // Background generator
 @mixin bodyBackground() {
-	@include radial-gradient( #add9e4, #f7fbfc );
+	background: $backgroundColor;
 }
 
 .txtright {
@@ -67,6 +69,11 @@ $selectionBackgroundColor: #134674;
         vertical-align: middle;
     }
 
+    ul.no-style {
+        list-style-type: none;
+        margin-left: 0;
+    }
+
     section img {
         border: 0;
     }
@@ -97,6 +104,7 @@ $selectionBackgroundColor: #134674;
         color: #555;
         font-style: italic;
         text-align: right;
+        padding-right: 5px;
     }
 
     .txtcenter {
