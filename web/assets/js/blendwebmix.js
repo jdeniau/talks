@@ -60,3 +60,13 @@ Reveal.addEventListener('slidechanged', function (event) {
 
     });
 });
+
+$(function() {
+    $(document).on('contextmenu', function(e) {
+        e.preventDefault();
+
+        Reveal.next();
+
+        return false;
+    });
+});

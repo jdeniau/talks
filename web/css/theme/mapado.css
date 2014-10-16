@@ -100,7 +100,7 @@ body {
   color: #424242; }
 
 ::selection {
-  color: white;
+  color: #fff;
   background: #134674;
   text-shadow: none; }
 
@@ -215,56 +215,60 @@ body {
 .reveal .slide-number {
   color: #3b759e; }
 
-.reveal .vmiddle {
-  vertical-align: middle; }
-.reveal .w45 {
-  width: 45%; }
-.reveal ul {
-  list-style-type: square; }
-.reveal ul.no-style {
-  list-style-type: none;
-  margin-left: 0; }
-.reveal section img {
-  border: 0; }
-  .reveal section img.no-style {
-    background: none;
-    box-shadow: none; }
-.reveal blockquote {
-  width: 85%; }
-.reveal .controls div {
-  opacity: .3; }
-  .reveal .controls div.enabled {
-    opacity: .5; }
-.reveal .large {
-  font-size: 1.3em !important; }
-.reveal .small {
-  font-size: 0.8em !important; }
-.reveal .gray {
-  color: #444; }
-.reveal .signature {
-  font-size: 0.8em;
-  color: #555;
-  font-style: italic;
-  text-align: right;
-  padding-right: 5px; }
-.reveal .txtcenter {
-  text-align: center; }
-.reveal [data-fade-to] {
-  position: relative;
-  display: inline-block;
-  height: 100%; }
-  .reveal [data-fade-to] img {
-    display: block; }
-  .reveal [data-fade-to] img.fade {
+.reveal {
+  cursor: none; }
+  .reveal .vmiddle {
+    vertical-align: middle; }
+  .reveal .w45 {
+    width: 45%; }
+  .reveal ul {
+    list-style-type: square; }
+  .reveal ul.no-style {
+    list-style-type: none;
+    margin-left: 0; }
+  .reveal section img {
+    border: 0; }
+    .reveal section img.no-style {
+      background: none;
+      box-shadow: none; }
+  .reveal blockquote {
+    width: 85%; }
+  .reveal .controls div {
+    opacity: .3; }
+    .reveal .controls div.enabled {
+      opacity: .5; }
+  .reveal .large {
+    font-size: 1.3em !important; }
+  .reveal .small {
+    font-size: 0.8em !important; }
+  .reveal .gray {
+    color: #444; }
+  .reveal .signature {
+    font-size: 0.8em;
+    color: #555;
+    font-style: italic;
+    text-align: right;
+    padding-right: 5px; }
+  .reveal .txtcenter {
+    text-align: center; }
+  .reveal [data-fade-to] {
     position: relative;
-    z-index: 2;
-    margin-left: auto;
-    margin-right: auto; }
-  .reveal [data-fade-to] img.fade-new {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-.reveal strike {
-  text-decoration: none;
-  background-image: linear-gradient(transparent 56%, black 56%, black 64%, transparent 64%); }
+    display: inline-block;
+    height: 100%; }
+    .reveal [data-fade-to] img {
+      display: block; }
+    .reveal [data-fade-to] img.fade {
+      position: relative;
+      z-index: 2;
+      margin-left: auto;
+      margin-right: auto; }
+    .reveal [data-fade-to] img.fade-new {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+  .reveal strike {
+    text-decoration: none;
+    background-image: linear-gradient(transparent 56%, #000 56%, #000 64%, transparent 64%); }
+
+/*# sourceMappingURL=mapado.css.map */
