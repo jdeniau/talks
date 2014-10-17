@@ -1,8 +1,5 @@
 Reveal.addEventListener('newsletter', function () {
-    window.setTimeout(
-        function () { $.albox({ url: '/assets/newsletter.html' }); },
-        5000
-    );
+    $.albox({ url: '/assets/newsletter.html' });
 });
 
 Reveal.addEventListener('presentation-title', function () {
@@ -62,11 +59,11 @@ Reveal.addEventListener('slidechanged', function (event) {
 });
 
 $(function() {
-    $(document).on('contextmenu', function(e) {
-        e.preventDefault();
+    //$(document).on('contextmenu', function(e) {
+    //    e.preventDefault();
 
-        Reveal.next();
+    //    Reveal.next();
 
-        return false;
-    });
+    //    return false;
+    //});
 });
