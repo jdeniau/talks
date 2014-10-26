@@ -2,6 +2,12 @@ Reveal.addEventListener('newsletter', function () {
     $.albox({ url: '/assets/newsletter.html' });
 });
 
+$(document).keydown(function(event) {
+    if (Albox.instance && (event.keyCode == 65 || event.keyCode == 67)) {
+        Albox.instance.close();
+    }
+});
+
 Reveal.addEventListener('presentation-title', function () {
     var timeout = 800;
 
