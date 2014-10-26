@@ -100,7 +100,7 @@ body {
   color: #424242; }
 
 ::selection {
-  color: #fff;
+  color: white;
   background: #134674;
   text-shadow: none; }
 
@@ -243,8 +243,12 @@ body {
     font-size: 0.8em !important; }
   .reveal .gray {
     color: #444; }
+  .reveal blockquote {
+    font-size: 1.2em;
+    margin-bottom: .6em; }
+  .reveal pre code.no-max-height {
+    max-height: 100%; }
   .reveal .signature {
-    font-size: 0.8em;
     color: #555;
     font-style: italic;
     text-align: right;
@@ -269,6 +273,4 @@ body {
       z-index: 1; }
   .reveal strike {
     text-decoration: none;
-    background-image: linear-gradient(transparent 56%, #000 56%, #000 64%, transparent 64%); }
-
-/*# sourceMappingURL=mapado.css.map */
+    background-image: linear-gradient(transparent 56%, black 56%, black 64%, transparent 64%); }

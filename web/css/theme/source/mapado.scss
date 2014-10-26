@@ -135,8 +135,17 @@ $headingTextTransform: none;
         color: #444;
     }
 
+    blockquote {
+        font-size: 1.2em;
+        margin-bottom: .6em;
+    }
+
+    pre code.no-max-height {
+        max-height: 100%;
+    }
+
     .signature {
-        font-size: 0.8em;
+        //font-size: 0.8em;
         color: #555;
         font-style: italic;
         text-align: right;

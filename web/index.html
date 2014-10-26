@@ -49,11 +49,13 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section id="welcome-blend">
+                    <h2>Développeurs,</h2>
+                    <h3>Améliorez votre UX simplement !</h3>
                     <img src="/assets/img/logo-blend.jpg" class="stretch no-style" />
                 </section>
 
                 <section>
-                    <section id="whoami" data-state="newsletter">
+                    <section id="whoami">
                         <h1>Julien Deniau</h1>
 
                         <ul class="no-style">
@@ -71,6 +73,12 @@
                             </li>
                             <li>
                                 <p>
+                                    <span class="fa fa-at">@</span>
+                                    <a mailto="julien@mapado.com">julien@mapado.com</a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
                                     <span class="fa fa-twitter"></span>
                                     <a href="http://www.twitter.com/j_deniau">j_deniau</a>
                                 </p>
@@ -84,6 +92,7 @@
                         </ul>
                     </section>
 
+                    <!--
                     <section id="newsletter-happy">
                         <blockquote>
                             &ldquo;Génial, ce site que je ne connais pas propose une newsletter, je vais m'inscrire !&rdquo;
@@ -97,16 +106,12 @@
                         </blockquote>
                         <p class="signature"> Environ tous ceux qui n'ont pas déjà quitté le site </p>
                     </section>
-
-                    <section id="objective">
-                        <h1>Attention</h1>
-                        Cette conférence n'est pas 100% objective !
-                    </section>
+                    -->
                 </section>
 
                 <section>
                     <section id="index" data-state="presentation-title">
-                        <h1>Développeurs</h1>
+                        <h1>Développeurs,</h1>
                         <h2 class="custom-fragment">Abonnez-vous a vos newsletters</h2>
                         <h2 class="custom-fragment">Téléchargez vos applications mobiles</h2>
                         <h2 class="custom-fragment">Acceptez vos cookies</h2>
@@ -157,6 +162,7 @@
                 <section id="summary">
                     <h1>Sommaire</h1>
                     <ul>
+                        <li><p>Qu'est-ce que l'UX ?</p>
                         <li><p>Téléchargement d'applications mobiles</p>
                         <li><p>Information sur les cookies</p>
                         <li><p>Crop d'image</p>
@@ -165,7 +171,6 @@
                         <li><p>Refonte de site</p>
                     </ul>
                 </section>
-
 
                 <!-- Download mobile app -->
                 <section>
@@ -188,18 +193,17 @@
                         </aside>
                     </section>
 
+                    <!--
                     <section id="mobile-app-bad-quote">
                         <blockquote>
                             &ldquo;Grrrrrr....&rdquo;
                         </blockquote>
                         <p class="signature">Moi</p>
                     </section>
+                    -->
 
                     <section id="mobile-app-good">
                         <div class="stretch">
-                            <div data-fade-to="assets/img/download-app/good/cityvox-opacity.png">
-                                <img src="assets/img/download-app/good/cityvox.png" />
-                            </div>
                             <div data-fade-to="assets/img/download-app/good/nouvel-obs-opacity.png">
                                 <img src="assets/img/download-app/good/nouvel-obs.png" />
                             </div>
@@ -212,6 +216,7 @@
                     </section>
 
                     <section id="mobile-app-best">
+                        <h2>Marketing + UX, c'est possible ?</h2>
                         <div class="stretch">
                             <div data-fade-to="assets/img/download-app/good/frandroid-1-opacity.png">
                                 <img src="assets/img/download-app/good/frandroid-1.png" />
@@ -228,6 +233,16 @@
                             &ldquo;Pas maintenant, mais pourquoi pas.&rdquo;
                         </blockquote>
                         <p class="signature">Encore moi</p>
+                    </section>
+
+                    <section id="newsletter" data-state="newsletter">
+                        <h1>Exit intend popup</h1>
+                        <img src="/assets/img/download-app/ouibounce.gif" class="stretch" />
+                        <div>
+                            <a href="http://carlsednaoui.github.io/ouibounce/">
+                                Ouibounce
+                            </a>
+                        </div>
                     </section>
 
                     <section id="mobile-app-conclusion">
@@ -296,15 +311,8 @@
                         <div class="fragment classpasclass class"></div>
                     </section>
 
-                    <section id="cookie-tacit-20min">
-                        <blockquote>Bonjour, j'aimerais le menu s'il vous plaît !</blockquote>
-                        <div data-fade-to="/assets/img/cookies/3-20minutes-opacity.png" class="stretch">
-                            <img src="/assets/img/cookies/3-20minutes.png" />
-                        </div>
-                        <div class="fragment classpasclass pasclass"></div>
-                    </section>
-
                     <section id="cookie-tacit-lemonde">
+                        <blockquote>Bonjour, j'aimerais le menu s'il vous plaît !</blockquote>
                         <div data-fade-to="/assets/img/cookies/4-lemonde-opacity.png" class="stretch">
                             <img src="/assets/img/cookies/4-lemonde.png" />
                         </div>
@@ -332,32 +340,44 @@
  }</code></pre>
                     </section>
 
+                    <section id="cookie-plugin">
+                        <h2>Il y a un plugin jQuery pour ça</h2>
+                        <img class="stretch" src="/assets/img/cookies/jquery-cookiebar.png" />
+                        <pre><code class="javascript">$(function(){
+    $.cookieBar({ message: "J'aime les cookies", /* ... */ });
+});</code></pre>
+                        <span class="fa fa-link"></span>
+                        <a href="http://www.primebox.co.uk/projects/jquery-cookiebar/">
+                            jquery-cookiebar plugin
+                        </a>
+                    </section>
+
                     <section id="cookie-conclusion">
-                        <h2>
+                        <h1>
                             Faites discret
-                        </h2>
-                        <h4>
+                        </h1>
+                        <h2>
                             Ça n'intéresse que la CNIL
-                        </h4>
+                        </h2>
                     </section>
                 </section>
 
                 <!-- Crop image -->
                 <section>
                     <section id="crop-index">
-                        <h1>
-                            <h1>Développeurs</h1>
-                            <h2>Croppez vos images</h2>
-                            <h4>(ou montrez-nous des boobs)</h4>
-                        </h1>
+                        <h1>Développeurs</h1>
+                        <h2>Croppez vos images</h2>
                     </section>
 
                     <section id="crop-programme-tv-hommes">
-                        <img src="/assets/img/crop/programme-tv-hommes.jpg" class="stretch" />
+                        <div class="stretch">
+                            <img src="/assets/img/crop/programme-tv-hommes.jpg" />
+                            <img src="/assets/img/crop/programme-tv-femmes.jpg" />
+                        </div>
 
-                        <div class="fragment">
+                        <div>
                             <blockquote>
-                                &ldquo;Ah oui, en plus je l'aime bien l'animateur de NRJ 12 !&rdquo;
+                                &ldquo;Chéri, qu'est-ce qu'on regarde à la télé ?&rdquo;
                             </blockquote>
                             <p class="signature">Madame michu</p>
                         <div>
@@ -367,22 +387,6 @@
                         <aside class="notes">
                             8 min
                         </aside>
-                    </section>
-
-                    <section id="crop-programme-tv-femmes">
-                        <img src="/assets/img/crop/programme-tv-femmes.jpg" class="stretch" />
-
-                        <div class="fragment">
-                            <blockquote>
-                                &ldquo;Ah mais en fait je l'aime bien l'animatrice de TF1 !&rdquo;
-                            </blockquote>
-                            <p class="signature">Monsieur michu</p>
-                        <div>
-
-                        <div class="fragment">
-                            <div class="classpasclass pasclass coupled"></div>
-                            <div class="classpasclass class coupled"></div>
-                        </div>
                     </section>
 
                     <section id="crop-devinette">
@@ -407,7 +411,7 @@
                     </section>
 
                     <section id="crop-result-second-crop">
-                        <h1>Encore des boobs ?</h1>
+                        <h2>À chaque page son crop</h2>
                         <img src="/assets/img/crop/mimimathy-antoinette-crop2.jpg" class="stretch" />
                         <p class="signature">
                             tf1.fr
@@ -484,12 +488,12 @@
                     </section>
 
                     <section id="crop-conclusion">
-                        <h2>
+                        <h1>
                             Utilisez du code existant
-                        </h2>
-                        <h4>
+                        </h1>
+                        <h2>
                             ou croppez vos images à la main
-                        </h4>
+                        </h2>
                     </section>
                 </section>
 
@@ -529,6 +533,7 @@
                     </section>
 
                     <section id="good-filter">
+                        <h2>Recherche à facettes</h2>
                         <div class="stretch">
                             <img src="/assets/img/filter/good-filter.png">
                             <img class="fragment" src="/assets/img/filter/good-filter-filtered.png">
@@ -540,35 +545,55 @@
                         <h2>ElasticSearch</h2>
                         <h5>Requête</h5>
                         <pre><code class="json">{
-    "query": { "simple_query_string": { "query": "hérisson" } },
     "aggs": {
-        "top_rubric": {
-            "terms": {
-                "field": "rubric_id",
-                "size": 10
-            }
+        "animal": {
+            "terms": { "field": "animal" }
+        },
+        "couleur": {
+            "terms": { "field": "couleur" }
+        },
+        "taille": {
+            "terms": { "field": "taille" }
         }
     }
-}
-</code></pre>
-                        <h5>Réponse</h5>
-                        <pre><code class="json">    "aggregations" : {
-        "top_rubric" : {
-            "buckets" : [
-                { "key" : 118, "doc_count" : 55 },
-                { "key" : 16, "doc_count" : 34 },
-                { "key" : 288, "doc_count" : 26 },
-                { "key" : 78, "doc_count" : 25 }
-            ]
-        }
-    }
-</code></pre>
+}</code></pre>
                         <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.x/search-aggregations.html">elasticsearch.org</a>
                     </section>
 
+                    <section id="elasticsearch-response">
+                        <h2>ElasticSearch</h2>
+                        <h5>Réponse</h5>
+                        <pre><code class="json no-max-height">    "aggregations" : {
+        "animal" : {
+            "buckets" : [
+                { "key" : "chat", "doc_count" : 25 },
+                { "key" : "hérisson", "doc_count" : 24 }
+            ]
+        },
+        "couleur" : {
+            "buckets" : [
+                { "key" : "bleu", "doc_count" : 42 },
+                { "key" : "orange", "doc_count" : 23 },
+                { "key" : "vert", "doc_count" : 21 },
+            ]
+        },
+        "taille" : {
+            "buckets" : [
+                { "key" : "M", "doc_count" : 31 },
+                { "key" : "XL", "doc_count" : 24 },
+                { "key" : "S", "doc_count" : 17 },
+                { "key" : "XXL", "doc_count" : 8 },
+            ]
+        }
+    }</code></pre>
+                    </section>
+
                     <section id="filter-conclusion">
-                        <h3>Ne proposez pas ce que vous n'avez pas</h3>
-                        <h4>Utilisez ElasticSearch (ou faites beaucoup de requêtes SQL)</h4>
+                        <h2>Ne proposez pas ce que vous n'avez pas</h2>
+
+                        <h3>
+                            Filtrez vos filtres (!) de recherche en AJAX !
+                        </h3>
                     </section>
                 </section>
 
@@ -585,6 +610,8 @@
                         <div data-fade-to="/assets/img/date/liberation-filter.png" class="stretch">
                             <img src="/assets/img/date/liberation.png" />
                         </div>
+                        <blockquote>18 septembre 2014 à 12:51</blockquote>
+
                         <div class="fragment classpasclass pasclass"></div>
 
                         <aside class="notes">
@@ -597,6 +624,7 @@
                         <div data-fade-to="/assets/img/date/frandroid-filter.png" class="stretch">
                             <img src="/assets/img/date/frandroid.png" />
                         </div>
+                        <blockquote>hier à 16:07</blockquote>
                         <div class="fragment classpasclass class"></div>
                     </section>
 
@@ -612,25 +640,43 @@
                         <div class="fragment classpasclass perfect"></div>
                     </section>
 
-                    <section id="date-php">
-                        <h2>Un petit exemple rapide</h2>
-                        <h5>(très rapide)</h5>
-                        <pre><code class="php">
-function humanDate($date) { 
-    // comparaison avec aujourd'hui
-    $dateDiff = $date->diff(new \DateTime('00:00'));
-    if (!$dateDiff->invert && $dateDiff->d == 0) {
-        // hier
-        $output = 'Hier à ' . $date->format('H:i');
-    } else {
-        // pas hier
-        $output = $date->format('\L\e d/m \à H:i');
-    }
-}
+                    <section id="date-lib">
+                        <h2>Il y a une lib pour faire ça</h2>
+                        <h5>
+                            Python:
+                            <a href="http://babel.pocoo.org/">
+                                babel
+                            </a>
+                        </h5>
+                        <pre><code class="python">from datetime import timedelta
+from babel.dates import format_timedelta
 
-$articleDate = new \DateTime('yesterday 16:08');
-echo humanDate($articleDate);
+d = timedelta(days=2)
+format_timedelta(d)
+# Out: "2 jours"
+</code></pre>
 
+                        <h5>
+                            PHP:
+                            <a href="https://github.com/briannesbitt/Carbon">
+                              Carbon
+                            </a>
+                        </h5>
+                        <pre><code class="php">use Carbon\Carbon;
+$c = new Carbon('yesterday');
+echo $c->diffForHumans(Carbon::now());
+// Out: 1 day before
+</code></pre>
+
+                        <h5>
+                            Javascript/Node:
+                            <a href="http://momentjs.com/">
+                                Moment.js
+                            </a>
+                        </h5>
+                        <pre><code class="javascript">var moment = require('moment');
+moment("2012-06-20", "YYYY-MM-DD").fromNow();
+//Out: il y a 2 ans
 </code></pre>
                     </section>
                 </section>
@@ -717,6 +763,7 @@ echo humanDate($articleDate);
                         </div>
                     </section>
 
+                    <!--
                     <section id="refonte-airbnb">
                         <h2>Airbnb</h2>
                         <table class="stretch">
@@ -729,6 +776,7 @@ echo humanDate($articleDate);
                         </table>
                         <div class="fragment classpasclass pasclass"></div>
                     </section>
+                    -->
 
                     <section id="refonte-lbc">
                         <h2>Refonte de leboncoin.fr en ????</h2>
@@ -753,12 +801,9 @@ echo humanDate($articleDate);
 
                 <section>
                     <section id="tip">
-                        <h2>
-                            Conclusion
-                        </h2>
-                        <p>
-                            &ldquo; Ne restez pas simple <strike>spectateur</strike> développeur &rdquo; :
-                        </p>
+                        <h3>
+                            &ldquo; Ne restez pas simple <strike>spectateur</strike> développeur &rdquo;
+                        </h3>
                         <ul>
                             <li> Utilisez votre produit
                             <li> Corrigez ce qui vous dérange
@@ -774,6 +819,10 @@ echo humanDate($articleDate);
                         <p class="signature">
                             <span class="fa fa-twitter"></span> j_deniau
                         </p>
+
+                        <div style="margin-top: 4em">
+                            Mapado recrute: <a mailto="julien@mapado.com">julien@mapado.com</a>
+                        </div>
                     </section>
                 </section>
             </div>
