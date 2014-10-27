@@ -11,8 +11,8 @@ $(document).keydown(function(event) {
 Reveal.addEventListener('presentation-title', function () {
     var timeout = 800;
 
-    $('.presentation-title .current-custom-fragment').removeClass('current-custom-fragment');
-    $('.presentation-title .custom-fragment').first().addClass('current-custom-fragment');
+    $('.present .current-custom-fragment').removeClass('current-custom-fragment');
+    $('.present .custom-fragment').first().addClass('current-custom-fragment');
 
     var nextFragment = function() {
         var cur = $('.presentation-title .custom-fragment.current-custom-fragment');
