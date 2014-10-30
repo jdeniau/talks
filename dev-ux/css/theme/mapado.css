@@ -77,13 +77,13 @@
   .classpasclass.coupled:last-child {
     background-position: calc(50% + 250px) center; }
   .classpasclass.perfect {
-    background-image: url(assets/img/pad/perfect.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(../../assets/img/pad/perfect.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.class {
-    background-image: url(assets/img/pad/boss.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(../../assets/img/pad/boss.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.pasclass {
-    background-image: url(assets/img/pad/nope.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(../../assets/img/pad/nope.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.vraimentpasclass {
-    background-image: url(assets/img/pad/what.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(../../assets/img/pad/what.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
 
 /*********************************************
  * GLOBAL STYLES
