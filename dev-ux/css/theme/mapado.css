@@ -77,13 +77,13 @@
   .classpasclass.coupled:last-child {
     background-position: calc(50% + 250px) center; }
   .classpasclass.perfect {
-    background-image: url(/assets/img/pad/perfect.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(assets/img/pad/perfect.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.class {
-    background-image: url(/assets/img/pad/boss.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(assets/img/pad/boss.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.pasclass {
-    background-image: url(/assets/img/pad/nope.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(assets/img/pad/nope.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.vraimentpasclass {
-    background-image: url(/assets/img/pad/what.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(assets/img/pad/what.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
 
 /*********************************************
  * GLOBAL STYLES
@@ -100,7 +100,7 @@ body {
   color: #424242; }
 
 ::selection {
-  color: white;
+  color: #fff;
   background: #134674;
   text-shadow: none; }
 
@@ -215,62 +215,62 @@ body {
 .reveal .slide-number {
   color: #3b759e; }
 
-.reveal {
-  cursor: none; }
-  .reveal .vmiddle {
-    vertical-align: middle; }
-  .reveal .w45 {
-    width: 45%; }
-  .reveal ul {
-    list-style-type: square; }
-  .reveal ul.no-style {
-    list-style-type: none;
-    margin-left: 0; }
-  .reveal section img {
-    border: 0; }
-    .reveal section img.no-style {
-      background: none;
-      box-shadow: none; }
-  .reveal blockquote {
-    width: 85%; }
-  .reveal .controls div {
-    opacity: .3; }
-    .reveal .controls div.enabled {
-      opacity: .5; }
-  .reveal .large {
-    font-size: 1.3em !important; }
-  .reveal .small {
-    font-size: 0.8em !important; }
-  .reveal .gray {
-    color: #444; }
-  .reveal blockquote {
-    font-size: 1.2em;
-    margin-bottom: .6em; }
-  .reveal pre code.no-max-height {
-    max-height: 100%; }
-  .reveal .signature {
-    color: #555;
-    font-style: italic;
-    text-align: right;
-    padding-right: 5px; }
-  .reveal .txtcenter {
-    text-align: center; }
-  .reveal [data-fade-to] {
+.reveal .vmiddle {
+  vertical-align: middle; }
+.reveal .w45 {
+  width: 45%; }
+.reveal ul {
+  list-style-type: square; }
+.reveal ul.no-style {
+  list-style-type: none;
+  margin-left: 0; }
+.reveal section img {
+  border: 0; }
+  .reveal section img.no-style {
+    background: none;
+    box-shadow: none; }
+.reveal blockquote {
+  width: 85%; }
+.reveal .controls div {
+  opacity: .3; }
+  .reveal .controls div.enabled {
+    opacity: .5; }
+.reveal .large {
+  font-size: 1.3em !important; }
+.reveal .small {
+  font-size: 0.8em !important; }
+.reveal .gray {
+  color: #444; }
+.reveal blockquote {
+  font-size: 1.2em;
+  margin-bottom: .6em; }
+.reveal pre code.no-max-height {
+  max-height: 100%; }
+.reveal .signature {
+  color: #555;
+  font-style: italic;
+  text-align: right;
+  padding-right: 5px; }
+.reveal .txtcenter {
+  text-align: center; }
+.reveal [data-fade-to] {
+  position: relative;
+  display: inline-block;
+  height: 100%; }
+  .reveal [data-fade-to] img {
+    display: block; }
+  .reveal [data-fade-to] img.fade {
     position: relative;
-    display: inline-block;
-    height: 100%; }
-    .reveal [data-fade-to] img {
-      display: block; }
-    .reveal [data-fade-to] img.fade {
-      position: relative;
-      z-index: 2;
-      margin-left: auto;
-      margin-right: auto; }
-    .reveal [data-fade-to] img.fade-new {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1; }
-  .reveal strike {
-    text-decoration: none;
-    background-image: linear-gradient(transparent 56%, black 56%, black 64%, transparent 64%); }
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto; }
+  .reveal [data-fade-to] img.fade-new {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+.reveal strike {
+  text-decoration: none;
+  background-image: linear-gradient(transparent 56%, #000 56%, #000 64%, transparent 64%); }
+
+/*# sourceMappingURL=mapado.css.map */

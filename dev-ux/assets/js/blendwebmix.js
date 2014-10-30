@@ -1,5 +1,5 @@
 Reveal.addEventListener('newsletter', function () {
-    $.albox({ url: '/assets/newsletter.html' });
+    $.albox({ url: 'assets/newsletter.html' });
 });
 
 $(document).keydown(function(event) {
