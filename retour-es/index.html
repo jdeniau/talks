@@ -307,9 +307,9 @@
                         <h2 class="white">
                             Probleme de "fenêtre geospaciale" avec MySQL
                         </h2>
-                        <p>
+                        <h4 class="white">
                             Que faire à Bron ≈ Que faire à Lyon
-                        </p>
+                        </h4>
                     </section>
                 </section>
 
@@ -335,7 +335,7 @@
 }</code></pre>
                     </section>
 
-                    <section id="function-score" data-background="assets/img/woody-flight.jpg">
+                    <section id="function-score" data-background="assets/img/potatoe-head-love.png">
                         <h1 class="white">
                             Function Score Query
                         </h1>
@@ -343,6 +343,26 @@
 
                     <section id="function-score-schema">
                         <img src="assets/img/function-score.png" class="stretch" />
+                    </section>
+
+                    <section id="function-score-exemple">
+                        <pre><code class="json">{ "query": {
+    "function_score: {
+        "score_mode": "avg",
+        "functions": [
+            {
+                "gauss": {
+                    "lat_lng": { "origin": { "lat": 45.76749, "lon": 4.83433 } }
+                }
+            },
+            {
+                "gauss": {
+                    "popularity": { "origin": 1, "scale": 0.1 }
+                }
+            }
+        ]
+    }
+} }</code></pre>
                     </section>
 
                     <section id="elastic-search-alone">
@@ -388,7 +408,7 @@
                     </section>
 
                     <section id="kiss">
-                        <h2>Formulaire simple > données simples</h2>
+                        <h2>Formulaire simple → données simples</h2>
                         <img src="assets/img/form.png" class="stretch" />
                     </section>
 
@@ -438,8 +458,81 @@
                 </section>
 
                 <section>
-                    <section id="recommandation">
-                        <h1>Recommandation utilisateur</h1>
+                    <section id="infinity" data-background="assets/img/infinity.png">
+                        <h1 class="white bottom">Vers l'infini et au delà</h1>
+                    </section>
+
+                    <section id="recommandation" data-background="assets/img/reco.jpg">
+                        <h1 class="white">Recommandation utilisateur</h1>
+                    </section>
+
+                    <section>
+                        <h2>
+                            Script Score
+                        </h2>
+
+                        <p>
+                            Ajout de la prise en compte des interactions utilisateurs (stockés dans ES via Logstash)
+                        </p>
+
+                        <pre><code class="json">{ "query": {
+    "function_score: {
+        "score_mode": "avg",
+        "functions": [
+            {
+                "gauss": {
+                    "lat_lng": { "origin": { "lat": 45.76749, "lon": 4.83433 } }
+                }
+            },
+            {
+                "script_score": {
+                    "script": "user-popularity",
+                    "params": { /* ... */ }
+                }
+            }
+        ]
+    }
+} }</code></pre>
+
+                        <p>
+                        </p>
+                    </section>
+
+                    <section id="response-time-middle" data-background="assets/img/woody-zigzag.png">
+                        <h1 class="white bottom">
+                            Temps de réponse ?
+                        </h1>
+                        <h2 class="white">
+                            ≈ 50 ms
+                        </h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section id="conclusion">
+                        <h2>Conclusion</h2>
+                        <ul>
+                        <li>
+                        <p>
+                            Pas de regrets sur la migration MySQL → ES
+                        </p>
+                        </li>
+                        <li>
+                        <p>
+                            ES pas votre base principale : <br />Optimisez vos données pour votre utilisation
+                        </p>
+                        </li>
+                        <li>
+                        <p>
+                            Probablement l'outil qu'il nous fallait
+                        </p>
+                        </li>
+                        <li>
+                        <p>
+                            On pense que c'est l'outil qu'il va nous falloir
+                        </p>
+                        </li>
+                        </ul>
                     </section>
                 </section>
             </div>

@@ -201,7 +201,15 @@ $headingTextTransform: none;
         color: #fff;
     }
 
-    h1.white, h2.white, h3.white {
+    h1.white, h2.white, h3.white, h4.white {
         text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .top {
+        padding-bottom: 2em;
+    }
+
+    .bottom {
+        padding-top: 2em;
     }
 }

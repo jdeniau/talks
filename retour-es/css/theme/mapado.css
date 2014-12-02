@@ -288,5 +288,9 @@ body {
   background-image: linear-gradient(transparent 56%, black 56%, black 64%, transparent 64%); }
 .reveal .white {
   color: #fff; }
-.reveal h1.white, .reveal h2.white, .reveal h3.white {
+.reveal h1.white, .reveal h2.white, .reveal h3.white, .reveal h4.white {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8); }
+.reveal .top {
+  padding-bottom: 2em; }
+.reveal .bottom {
+  padding-top: 2em; }
