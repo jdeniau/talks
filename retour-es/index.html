@@ -50,7 +50,7 @@
             <div class="slides">
                 <section id="welcome">
                     <h2>ElasticSearch,</h2>
-                    <h3></h3>
+                    <h3>Woo, dit mais c'est pas le truc qui Buzz ?</h3>
                 </section>
 
                 <section>
@@ -109,6 +109,7 @@
                 </section>
 
                 <section id="summary">
+                    <h2>Sommaire</h2>
                     <ul>
                         <li><p>Mapado en chiffres</p>
                         <li><p>Les débuts</p>
@@ -149,7 +150,7 @@
                     </section>
 
                     <section id="stack">
-
+                        <h2>Côté technique</h2>
                         <table>
                             <tr>
                                 <td class="vmiddle">
@@ -158,18 +159,18 @@
 
                                 <td class="txtleft">
                                     <p>
-                                    Code:<br />
+                                    <u>Code:</u><br />
                                     <strong>Python</strong>: Datamining, réplication, scripts "offline", gestion de dates<br />
                                     <strong>PHP</strong>: site mapado.com, serveur d'image
                                     </p><br />
 
                                     <p>
-                                    Framework:<br />
+                                    <u>Framework:</u><br />
                                     Symfony, Silex
                                     </p><br />
 
                                     <p>
-                                    Databases: <br />
+                                    <u>Databases: </u><br />
                                     MongoDB, MySQL, ElasticSearch
                                     </p>
                                 </td>
@@ -178,6 +179,7 @@
                     </section>
 
                     <section id="numbers">
+                        <h2>Côté chiffres</h2>
                         <table>
                             <tr>
                                 <td>
@@ -203,7 +205,7 @@
 
                 <section>
                     <section id="start" data-background="assets/img/soldiers.jpg">
-                        <h1  class="white">Début 2013: L'heure des choix</h1>
+                        <h1  class="white top">Début 2013: L'heure des choix</h1>
                     </section>
 
                     <section id="mysql-mongo">
@@ -224,6 +226,7 @@
 
                     <section id="mysql-schema">
                         <h2>Schema MySQL</h2>
+                        <h3>Recherche par date + geopoint</h3>
                         <img src="assets/img/mysql-bdd.png" class="stretch no-style" />
                     </section>
 
@@ -274,16 +277,21 @@
                         </table>
                     </section>
 
+                    <section id="works-fine" data-background="assets/img/rex.jpg">
+                        <h1 class="white">Fonctionne bien</h1>
+                        <h2 class="white">jusqu'à...</h2>
+                    </section>
+
                     <section id="fulltext">
-                        <h3>Full text search</h3>
+                        <h1>Full text search</h1>
                         <img src="assets/img/fulltext.png" class="stretch" />
-                        We need ElasticSearch !
+                        <h2>We need ElasticSearch !</h2>
                     </section>
                 </section>
 
                 <section>
                     <section id="fulltext-search" data-background="assets/img/grappin.jpg">
-                        <h1  class="white">Welcome ElasticSearch </h1>
+                        <h1  class="white">Let's (Elastic)Search </h1>
                     </section>
 
                     <section id="replication">
@@ -307,7 +315,7 @@
                         <h2 class="white">
                             Probleme de "fenêtre geospaciale" avec MySQL
                         </h2>
-                        <h4 class="white">
+                        <h4 class="white top">
                             Que faire à Bron ≈ Que faire à Lyon
                         </h4>
                     </section>
@@ -318,27 +326,10 @@
                         <h1 class="white">Abandon de MySQL</h1>
                     </section>
 
-                    <section id="es-moves">
-                        <p>Réplication MongoDB → ElasticSearch:</p>
-                        <p>
-                            Utilisation des "Nested" pour gérer nos listes de dates
-                        </p>
-                        <pre><code>{
-    "title": "Meetup Elasticsearch Lyon #1",
-    "lat_lng": "45.7622013, 4.8621385",
-    "schedule": [
-        {
-            "start_datetime": 2014-12-04 19:00:00,
-            "end_datetime": 2014-12-04 19:00:00
-        }
-    ]
-}</code></pre>
-                    </section>
-
                     <section id="function-score" data-background="assets/img/potatoe-head-love.png">
-                        <h1 class="white">
+                        <h1 class="white bottom">
                             Function Score Query
-                        </h1>
+                         </h1>
                     </section>
 
                     <section id="function-score-schema">
@@ -365,6 +356,39 @@
 } }</code></pre>
                     </section>
 
+                    <section id="es-moves">
+                        <p>Réplication MongoDB → ElasticSearch:</p>
+                        <p>
+                            Utilisation des "Nested" pour gérer nos listes de dates
+                        </p>
+                        <pre><code>{
+    "title": "Meetup Elasticsearch Lyon #1",
+    "lat_lng": "45.7622013, 4.8621385",
+    "schedule": [
+        {
+            "start_datetime": 2014-12-04 19:00:00,
+            "end_datetime": 2014-12-04 19:00:00
+        }
+    ]
+}</code></pre>
+                    </section>
+                    <section id="nested-filter">
+                    <h1>Filtre par date</h1>
+                    <h2>Que faire prochainement ?</h2>
+                        <pre><code>{ "filter" : {
+    "nested" : {
+        "path" : "schedule",
+        "filter" : {
+            "range" : {
+                "schedule.start_datetime": {
+                    "gte": 2014-12-04 19:30:00
+                }
+            }
+        }
+    }
+} }</code></pre>
+                    </section>
+
                     <section id="elastic-search-alone">
                         <ul>
                             <li>Une seule base de données
@@ -373,7 +397,7 @@
                     </section>
 
                     <section id="elastic-search-love" data-background="assets/img/ken-happy.jpg">
-                        <h1 class="white" style="color:red; font-size: 5em">
+                        <h1 class="white bottom" style="color:red; font-size: 5em">
                             ♡
                         </h1>
                     </section>
@@ -402,7 +426,7 @@
                     </section>
 
                     <section id="adapt-your-datas" data-background="assets/img/adapt.png">
-                        <h1 class="white">
+                        <h1 class="white top">
                             Adapter les données au site
                         </h1>
                     </section>
@@ -448,7 +472,7 @@
                     </section>
 
                     <section id="response-time-better" data-background="assets/img/zigzag-happy.jpg">
-                        <h1 class="white">
+                        <h1 class="white bottom">
                             Temps de réponse ?
                         </h1>
                         <h2 class="white">
@@ -477,7 +501,7 @@
 
                         <pre><code class="json">{ "query": {
     "function_score: {
-        "score_mode": "avg",
+        "score_mode": "sum",
         "functions": [
             {
                 "gauss": {
@@ -533,6 +557,10 @@
                         </p>
                         </li>
                         </ul>
+                    </section>
+
+                    <section id="question" data-background="assets/img/questions.png">
+                        <h1 class="white bottom">Merci, des questions ?</h1>
                     </section>
                 </section>
             </div>
