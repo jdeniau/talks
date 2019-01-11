@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>reveal.js</title>
+        <title>Analyse statique avec PHPStan</title>
 
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/white.css">
@@ -33,15 +33,17 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 <section data-markdown>
                     <script type="text/template">
 ## Explorez votre code avec de l'analyse statique
-
-#### [Julien Deniau](https://jdeniau.github.io/talks/)
                     </script>
                 </section>
 
                 <section>
-                    Je suis un vieux…
-                    <p class="fragment">
-                        codeur
+                <section id="my-name-is">
+                    <p>Je m'appelle Julien Deniau</p>
+                    <p>
+                        Je suis un vieux…
+                        <span class="fragment fade-left" style="display: inline-block;">
+                            codeur
+                        </span>
                     </p>
                 </section>
 
@@ -52,6 +54,11 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         <li>en PHP 3</li>
                         <li>avec Macromedia Dreamweaver</li>
                     </ul>
+
+                    <aside class="notes">
+                        Sortie de PHP 4 : Mai 2000<br />
+                        Sortie de PHP 5 : Juillet 2004
+                    </aside>
                 </section>
 
                 <section id="aventure">
@@ -60,7 +67,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <li>Pas de `System.out.println()` du Java</li>
                     <li>
                     <pre><code class="hljs php" data-trim>
-                    echo '<html>'; // et c'est parti !
+                    echo '&lt;html&gt;'; // et c'est parti !
                     </code></pre>
                     </li>
                     </ul>
@@ -69,6 +76,71 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         <br />
                     Bref, PHP c'était l'aventure
                     </h3>
+                </section>
+                </section>
+
+                <section>
+                <section id="israel" data-background-image="images/assassins-creed-jerusalem.jpg">
+                    <!--
+                    <p>Bon c'est vrai, des fois il fallait comprendre</p>
+                    -->
+                    <blockquote style="background: rgba(255, 255, 255, 0.8)">
+                        Parse error: syntax error, unexpected T_PAAMAYIM_NEKUDOTAYIM
+                    </blockquote>
+
+                    <aside class="notes">
+                        L'impression d'être Altaïr dans Assassin's Creed<br />
+
+                        Nom officiel de l'opérateur de résolution de portée (::) utilisé en PHP pour accéder aux membres statiques ou constants d'une classe.<br />
+                        Il s'utilise par la syntaxe `Classe::Element`
+                    </aside>
+
+                </section>
+
+                <section id="unexpected-variable" data-background-image="images/indi-x.jpg">
+                    <blockquote style="background: rgba(255, 255, 255, 0.8)">
+                    PHP Parse error: syntax error, unexpected '$a' (T_VARIABLE) on line 6
+                    </blockquote>
+                    <aside class="notes">
+                        Quel plaisir de fouiller pour trouver qu'en fait, il fallait regarder la ligne 5 !
+                    </aside>
+                </section>
+
+                <section id="freedom" data-background-image="images/tomb-raider.png" data-background-opacity="0.6">
+                    <h2>Mais la liberté du langage était tellement belle...</h2>
+                </section>
+
+                <section id="">
+                        PHP Fatal error: Uncaught Error:<br />
+                        Call to a member function getTitle() on null
+                    
+                    <aside class="notes">
+                        oui bon OK, ap 10 ans d'aventures, quelques versions de PHP, et quelques lignes de codes plus tard, je me suis rendu compte que je n'étais pas un aventurier
+
+                    </aside>
+                </section>
+                </section>
+
+                <section>
+                <section>
+                    J'aime voyager, mais j'aime avoir un compas pour me guider ; (une carte ?)
+                </section>
+                <section>
+                    J'aime découvrir, mais j’apprécie avoir une pierre philosophale pour comprendre ; (un dictionnaire ?)
+                </section>
+                <section
+                    id="manuel"
+                >
+                    <p>
+                        Construire : 👍
+                    </p>
+                    <p>
+                        Manuel : ♥
+                    </p>
+                    <p>
+                    <img src="images/ikea.jpg" />
+                    </p>
+                </section>
                 </section>
             </div>
         </div>
@@ -81,11 +153,13 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 // - https://github.com/hakimel/reveal.js#configuration
 // - https://github.com/hakimel/reveal.js#dependencies
 Reveal.initialize({
+
     dependencies: [
     { src: 'plugin/markdown/marked.js' },
     { src: 'plugin/markdown/markdown.js' },
     { src: 'plugin/notes/notes.js', async: true },
-    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/twemoji/2/twemoji.min.js', async: true, callback: function() { twemoji.parse(document.body); } },
     ]
 });
         </script>
