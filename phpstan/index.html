@@ -26,6 +26,16 @@ link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
+
+<style>
+img.emoji  {
+    width: 1em!important;
+    margin: 0!important;
+    background: none!important;
+    border: none!important;
+    box-shadow: none!important;
+     } 
+</style>
     </head>
     <body>
         <div class="reveal">
@@ -123,19 +133,42 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
                 <section>
                 <section>
-                    J'aime voyager, mais j'aime avoir un compas pour me guider ; (une carte ?)
+                    <p>
+                        👍 
+                        voyager
+                    </p>
+                    <p>
+                        ♥
+                        avec un compas
+                    </p>
+                    <aside class="notes">
+                        J'aime voyager, mais j'aime avoir un compas pour me guider ; (une carte ?)
+                    </aside>
                 </section>
+
                 <section>
-                    J'aime découvrir, mais j’apprécie avoir une pierre philosophale pour comprendre ; (un dictionnaire ?)
+                    <p>
+                         👍
+                         découvrir
+                    </p>
+                    <p>
+                    ♥
+                        comprendre avec un dictionnaire
+                    </p>
+                    <aside class="notes">
+                        J'aime découvrir, mais j’apprécie avoir une pierre philosophale pour comprendre ; (un dictionnaire ?)
+                    </aside>
                 </section>
                 <section
                     id="manuel"
                 >
                     <p>
-                        Construire : 👍
+                        👍
+                        construire
                     </p>
                     <p>
-                        Manuel : ♥
+                        ♥
+                        manuel
                     </p>
                     <p>
                     <img src="images/ikea.jpg" />
@@ -155,11 +188,20 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 Reveal.initialize({
 
     dependencies: [
-    { src: 'plugin/markdown/marked.js' },
-    { src: 'plugin/markdown/markdown.js' },
-    { src: 'plugin/notes/notes.js', async: true },
-    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-    { src: 'plugin/twemoji/2/twemoji.min.js', async: true, callback: function() { twemoji.parse(document.body); } },
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        {
+            src: 'node_modules/twemoji/2/twemoji.min.js',
+            async: true,
+            callback: function() {
+                twemoji.base = './node_modules/twemoji/2/';
+                twemoji.ext = '.svg';
+                twemoji.size = 'svg';
+                twemoji.parse(document.body);
+            },
+        },
     ]
 });
         </script>
