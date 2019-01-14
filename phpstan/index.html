@@ -90,7 +90,11 @@ img.emoji  {
                 </section>
 
                 <section>
-                <section id="israel" data-background-image="images/assassins-creed-jerusalem.jpg">
+                <section
+                    id="israel"
+                    data-background-image="images/assassins-creed-jerusalem.jpg"
+                    data-background-size="contain"
+                >
                     <!--
                     <p>Bon c'est vrai, des fois il fallait comprendre</p>
                     -->
@@ -107,7 +111,11 @@ img.emoji  {
 
                 </section>
 
-                <section id="unexpected-variable" data-background-image="images/indi-x.jpg">
+                <section
+                    id="unexpected-variable"
+                    data-background-image="images/indi-x.jpg"
+                    data-background-size="contain"
+                >
                     <blockquote style="background: rgba(255, 255, 255, 0.8)">
                     PHP Parse error: syntax error, unexpected '$a' (T_VARIABLE) on line 6
                     </blockquote>
@@ -116,7 +124,12 @@ img.emoji  {
                     </aside>
                 </section>
 
-                <section id="freedom" data-background-image="images/tomb-raider.png" data-background-opacity="0.6">
+                <section
+                    id="freedom"
+                    data-background-image="images/tomb-raider.png"
+                    data-background-opacity="0.6"
+                    data-background-size="contain"
+                >
                     <h2>Mais la liberté du langage était tellement belle...</h2>
                 </section>
 
@@ -175,6 +188,31 @@ img.emoji  {
                     </p>
                 </section>
                 </section>
+
+                <section>
+                <section id="explorer">
+                    <h3>
+                        <p>
+                        <strike>
+                            Je suis un aventurier
+                        </strike>
+                        </p>
+                        <p>
+                            Je suis un explorateur.
+                        </p>
+                    </h3>
+
+                </section>
+
+                <section>
+                    <p>
+                    <strong>Aventurier :</strong> seul avec ses bytes et son couteau
+                    </p>
+                    <p class="fragment">
+                    <strong>Explorateur :</strong> Aller fouiller avec les outils adaptés
+                    </p>
+                </section>
+                </section>
             </div>
         </div>
 
@@ -185,6 +223,9 @@ img.emoji  {
 // More info about config & dependencies:
 // - https://github.com/hakimel/reveal.js#configuration
 // - https://github.com/hakimel/reveal.js#dependencies
+Reveal.configure({
+    slideNumber: 'c/t',
+});
 Reveal.initialize({
 
     dependencies: [
