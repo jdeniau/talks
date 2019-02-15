@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="lib/css/github.css">
         <link rel="stylesheet" href="lib/css/github-gist.css">
         -->
+        <link rel="stylesheet" href="css/phpstan.css">
 
         <!-- Printing and PDF exports -->
         <script>
@@ -26,16 +27,6 @@ link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
-
-<style>
-img.emoji  {
-    width: 1em!important;
-    margin: 0!important;
-    background: none!important;
-    border: none!important;
-    box-shadow: none!important;
-     } 
-</style>
     </head>
     <body>
         <div class="reveal">
@@ -105,8 +96,9 @@ img.emoji  {
                     <aside class="notes">
                         L'impression d'être Altaïr dans Assassin's Creed<br />
 
-                        Nom officiel de l'opérateur de résolution de portée (::) utilisé en PHP pour accéder aux membres statiques ou constants d'une classe.<br />
-                        Il s'utilise par la syntaxe `Classe::Element`
+                        <br />
+                        <i>Nom officiel de l'opérateur de résolution de portée (::) utilisé en PHP pour accéder aux membres statiques ou constants d'une classe.<br />
+                            Il s'utilise par la syntaxe `Classe::Element`</i>
                     </aside>
 
                 </section>
@@ -212,6 +204,104 @@ img.emoji  {
                     <strong>Explorateur :</strong> Aller fouiller avec les outils adaptés
                     </p>
                 </section>
+                </section>
+
+                <section>
+                    <section id="tests">
+                        <h2>Les outils<br /></h2>
+                        <div class="round-container">
+                            <div class="round-tests">
+                                Tests
+                            </div>
+                            <div class="round-blank"></div>
+                        </div>
+                        <aside class="notes">
+                            <ul>
+                                <li> Les tests servent à valider qu'un système fonctionne
+                                <li> Ils évitent les régressions
+                                <li> Ils ne doivent pas servir à tester du code qui ne compilerait même pas dans un autre langage (tester qu'une erreur est bien retournée si on envoie `null` ou le mauvais type)
+                                    <li> PHP est "permissif", mais peut du coup amener des comportements étrange, ou bien un grand nombre de ligne de code inutile
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <p>PHP 7 : structuration du langage, typage statique</p>
+                        <p>Plus de méthode avec paramètre inconnu !</p>
+                        <div class="fragment">
+                            <br />
+                            <pre><code class="hljs shell" data-trim>
+                                Type error: Argument 1 passed to slugify()
+                                must be of the type string or null, integer given
+                            </code></pre>
+                            ↓
+                            <div>
+                                Fatal en prod !
+                            </div>
+                        </div>
+
+                        <aside class="notes">
+                            Au fur et à mesure des versions de PHP, le langage se "structure" de plus en plus,<br />
+                            et intègre du typage statique.<br />
+                            C'est bien ! Plus de méthode avec paramètres inconnu...<br />
+                            <br />
+                            `Type error` → Fatar erreur en prod !
+                        </aside>
+                    </section>
+                </section>
+
+                <section id="tools">
+                    <h2>Les outils<br /></h2>
+                    <div class="round-container">
+                        <div class="round-tests">
+                            Tests
+                        </div>
+                        <div class="round-phpstan fragment">
+                            Analyse <br />
+                            statique
+                        </div>
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li> Les tests servent à valider qu'un système fonctionne
+                            <li> Ils évitent les régressions
+                            <li> Ils ne doivent pas servir à tester du code qui ne compilerait même pas dans un autre langage (tester qu'une erreur est bien retournée si on envoie `null` ou le mauvais type)
+                                <li> PHP est "permissif", mais peut du coup amener des comportements étrange, ou bien un grand nombre de ligne de code inutile
+                        </ul>
+                    </aside>
+                </section>
+
+                <section id="static-analyzer">
+                    <section>
+                        <ul>
+                            <li>Analyseur : Il "lit" le code,
+                            <li>Statique : il n'exécute pas le programme
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Des dizaines d'analyseurs statiques</h2>
+                        <div> 
+                            <img data-src="/images/GitHub-Mark.png" width="150px" class="image-like-text" />
+                            <a href="https://github.com/exakat/php-static-analysis-tools" rel="noopener noreferer" target="_blank">
+                                exakat/php-static-analysis-tools
+                            </a>
+                        </div>
+                        <aside class="notes">
+                            <ul>
+                                <li> Détection de code mort, de bugs,
+                                <li> linter,
+                                <li> standard de code,
+                                <li> métriques,
+                                <li> etc.
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section id="phpstan">
+                        <h2>PHPStan</h2>
+                        <h3>PHP Static Analysis Tool</h3>
+                    </section>
                 </section>
             </div>
         </div>
