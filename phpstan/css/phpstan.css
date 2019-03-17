@@ -61,7 +61,7 @@ img.emoji  {
 */
 
 .reveal .slides section .hljs .fragment.highlight-red.visible {
-    background-color: #cccccc;
+    background-color: rgba(0,0,0,0.2);
     color: inherit;
     /*
     display: inline-block;

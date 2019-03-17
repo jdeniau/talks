@@ -319,9 +319,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         </ul>
                         </aside>
                     </section>
-                </section>
 
-                <section>
                     <section>
                         <pre><code class="hljs php" data-trim data-noescape>class Foo {
     <span class="fragment highlight-red" data-fragment-index="3">private $bar; <span class="fragment" data-fragment-index="3"> // considéré comme "@mixed"</span></span>
@@ -377,8 +375,24 @@ $foo->getBar();</code></pre>
 
                 <section>
                     <section>
-                        <h2>Très bien, et donc il sait faire quoi ?</h2>
+                        <h2>Les erreurs "de compilation"</h2>
                     </section>
+
+                    <section id="compile-errors">
+                        <pre><code class="hljs php" data-trim data-noescape>function sayHello(string $who): string {
+    return 'Hello ' . strtoupper($who);
+}
+
+$julien = new User('julien');
+
+sayHello($julien);
+                        </code></pre>
+
+                        <div class="fragment error" data-fragment-index="1">
+                            [ERROR] Parameter #1 $who of function sayHello expects string, User given.
+                        </div>
+                    </section>
+
                     <section id="wrong-interface-call">
                         <h4>Mauvaise fonction appelée</h4>
                         <pre><code class="hljs php" data-trim data-noescape>interface FooInterface {}
@@ -405,7 +419,7 @@ dumpFoo($foo);</code></pre>
 
                             <br />
                             <br />
-                            Là l'exemple parait "bidon" car il est simplifié, mais vous avez plein de cas comme ça dans votre code
+                            Là l'exemple parait "bidon" car il est simplifié, mais il est probable que vous ayez ce genre de cas dans votre code
                         <aside>
                     </section>
 
@@ -436,7 +450,10 @@ function doStuff(ObjectManager $entityManager)
 
                 <section>
                     <section id="keep-your-code-clean">
-                        <h4>Gardez votre code propre</h4>
+                        <h2>Garder son code propre</h2>
+                    </section>
+                    <section>
+                        <h4>Tests inutiles</h4>
                         <pre><code class="hljs php" data-trim data-noescape>class Foo { public $id = 1; }
 
 function getFoo(): Foo
@@ -461,7 +478,86 @@ $foo = getFoo();
                             PHPStan va ici vous aider à garder votre code propre en évitant les tests inutiles
                         </aside>
                     </section>
+                    <section id="casting">
+                        <h4>Conversions inutiles...</h4>
+                        <pre><code class="hljs php" data-trim data-noescape>$a = (int) 8 % 3; </code></pre>
+                        <div class="error">
+                            [ERROR] Casting to int something that's already int.
+                        </div>
+                        <div class="fragment">
+                        <h4>...ou requise !</h4>
+                        <pre><code class="hljs php" data-trim data-noescape>function div(int $a, int $b): int {
+    return round($a / $b);
+}</code></pre>
+                        <div class="error">
+                            [ERROR] Function div() should return int but returns float.
+                        </div>
+                        </div>
+
+                        <aside class="notes">
+                            On évite aussi de caster inutilement.<br />
+                            Ou de ne pas caster quand c'est requis !
+                        </aside>
+
+                    </section>
                 </section>
+
+                <section>
+                    <section>
+                        <h2>
+                            Eviter les fautes de frappe
+                        </h2>
+                    </section>
+                    <section id="mangopay">
+                        <pre><code class="hljs php" data-trim data-noescape>// librairie externe
+namespace MangoPay;
+class Address {
+    public $City;
+}
+
+class UserLegal {
+    public $Headquarter<span class="fragment highlight-red" data-fragment-index="1">s</span>Address;
+}
+
+// code métier
+$tmp = new \MangoPay\UserLegal();
+$tmp->HeadquarterAddress = new \MangoPay\Address();
+$tmp->HeadquarterAddress->City = 'Lyon';
+                        </code></pre>
+
+                        <div class="fragment error"  data-fragment-index="1">
+                            [ERROR] Access to an undefined property MangoPay\UserLegal::$HeadquarterAddress.
+                        </div>
+
+                        <aside class="notes">
+                            On évite les fautes de frappe aussi :<br />
+                            PHP permet d'ajouter a la volée des propriétés à un objet en publique et n'envoie même pas de warning<br />
+                            Un exemple avec de vrai code trouvé chez nous !<br />
+                            Du coup on a perdu quelques données non enregistrée
+                        </aside>
+                    </section>
+
+                    <section id="get-an-array">
+                        <pre><code class="hljs php" data-trim data-noescape>function getAnArray(iterable $iterable) : array
+{
+    $anArray = [];
+    
+    foreach ($iterable as $item) {
+        $<span class="fragment highlight-red">get</span>AnArray[] = $item;
+    }
+    
+    return $anArray;
+}</code></pre>
+
+                        <aside class="notes">
+                            Une variable mal nomée !<br />
+                            Pour info, php crée automatiquement un nouveau tableau<br />
+                            sous la variable `$getAnArray`
+                        </aside>
+                    </section>
+                </section>
+
+
 
             </div>
         </div>
