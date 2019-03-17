@@ -302,7 +302,167 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         <h2>PHPStan</h2>
                         <h3>PHP Static Analysis Tool</h3>
                     </section>
+
+                    <section>
+                        <h2>PHPStan n'est pas</h2>
+                        <ul>
+                            <li>Un framework de test,
+                            <li>Du code qui s'exécute,
+                            <li>Magique : il ne devine pas ce que vous ne lui dites pas
+                        </ul>
+
+                        <aside class="notes">
+                        <ul>
+                            <li>Un framework de test (unitaire, fonctionnel, ou autre),
+                            <li>Du code qui s'exécute (vous attendez un string, vous envoyez un tableau, il ne va pas "prendre la main" pour envoyer une exception avant la fatal PHP),
+                            <li>Magique : il ne devine pas ce que vous ne lui dites pas
+                        </ul>
+                        </aside>
+                    </section>
                 </section>
+
+                <section>
+                    <section>
+                        <pre><code class="hljs php" data-trim data-noescape>class Foo {
+    <span class="fragment highlight-red" data-fragment-index="3">private $bar; <span class="fragment" data-fragment-index="3"> // considéré comme "@mixed"</span></span>
+    
+    public function __construct(array $bar) {
+        $this->bar = $bar;
+    }
+    
+    public function getBar() {
+        return strtoupper($this->bar);
+    }
+}
+
+$foo = new Foo(['io']);
+$foo->getBar();</code></pre>
+                        <div class="fragment success" data-fragment-index="1">
+                            [OK] No errors
+                        </div>
+                        <div class="fragment error" data-fragment-index="2">
+PHP Warning:  strtoupper() expects parameter 1 to be string, array given
+                        </div>
+                        <aside class="notes">
+                            PHPStan ne va pas vous remonter d'erreur car $bar est considéré comme `mixed`
+                        <aside>
+                    </section>
+
+                    <section id="current">
+                        <pre><code class="hljs php" data-trim>class Foo {
+    /**
+     * @var array
+     */
+    private $bar;
+    
+    public function __construct(array $bar) {
+        $this->bar = $bar;
+    }
+    
+    public function getBar() {
+        return strtoupper($this->bar);
+    }
+}
+
+$foo = new Foo(['io']);
+$foo->getBar();</code></pre>
+                        <div class="fragment error">
+                            [ERROR] Parameter #1 $str of function strtoupper expects string, array given.
+                        </div>
+                        <aside class="notes">
+                            Par contre si $bar est typé comme un tableau, alors là vous allez avoir une erreur.
+                        <aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Très bien, et donc il sait faire quoi ?</h2>
+                    </section>
+                    <section id="wrong-interface-call">
+                        <h4>Mauvaise fonction appelée</h4>
+                        <pre><code class="hljs php" data-trim data-noescape>interface FooInterface {}
+
+class Foo implements FooInterface {
+  public function bar() {
+    // do stuff
+  }
+}
+
+function dumpFoo(FooInterface $fooInterface) {
+  <span class="fragment highlight-red" data-fragment-index="1">return  $fooInterface->bar();</span>
+}
+
+$foo = new Foo();
+dumpFoo($foo);</code></pre>
+
+                        <div class="fragment error" data-fragment-index="1">
+                            [ERROR] Call to an undefined method FooInterface::bar().
+                        </div>
+
+                        <aside class="notes">
+                            Il sait très bien remonter des erreurs quand vous appelez des fonctions qui ne sont pas définit dans une interface par exemple.
+
+                            <br />
+                            <br />
+                            Là l'exemple parait "bidon" car il est simplifié, mais vous avez plein de cas comme ça dans votre code
+                        <aside>
+                    </section>
+
+                    <section id="wrong-interface-call-doctrine">
+                        <h4>Mauvaise fonction appelée</h4>
+                        <pre><code class="hljs php" data-trim>use Doctrine\Common\Persistence\ObjectManager;
+
+function doStuff(ObjectManager $entityManager)
+{
+  return $entityManager->createQueryBuilder()
+    ->from('SomeEntity', 'a')
+    ->where('a.id = 8')
+    ->getResult();
+}</code></pre>
+                        <div class="fragment">
+                            Un <code>ObjectManager</code> n'a pas de méthode <code>createQueryBuilder</code>.<br />
+                            Cette méthode fait partie de <code>Doctrine\ORM\EntityManagerInterface</code>
+                        </div>
+
+                        <aside class="notes">
+                            C'est nettement moins trivial quand on utilise une librairie externe, Doctrine par exemple.<br />
+                            ou bien un code métier complexe.
+                            <br /><br />
+                            Le fait d'avoir un code "propre" vous permettra de "changer" des choses très facilement, sans avoir à (re)comprendre des tests
+                        <aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section id="keep-your-code-clean">
+                        <h4>Gardez votre code propre</h4>
+                        <pre><code class="hljs php" data-trim data-noescape>class Foo { public $id = 1; }
+
+function getFoo(): Foo
+{
+  return new Foo();
+}
+
+$foo = getFoo();
+
+<span class="fragment highlight-red" data-fragment-index="1">if ($foo) {</span>
+  var_dump($foo->id);
+<span class="fragment highlight-red" data-fragment-index="1">}</span>
+                        </code></pre>
+                        <div class="fragment error"  data-fragment-index="1">
+                            [ERROR] If condition is always true.
+                        </div>
+                        <aside class="notes">
+                            En parlant de code "propre", il est possible que vous ayez déjà rencontré ce genre de code.
+                            <br />
+                            On peut faire ce genre de test parce que "comme ça on est sur" ou bien simplement parce que `getFoo` pouvait retourner `null` avant, mais ce n'est plus le cas.
+                            <br />
+                            PHPStan va ici vous aider à garder votre code propre en évitant les tests inutiles
+                        </aside>
+                    </section>
+                </section>
+
             </div>
         </div>
 
