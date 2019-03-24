@@ -516,13 +516,13 @@ class Address {
 }
 
 class UserLegal {
-    public $Headquarter<span class="fragment highlight-red" data-fragment-index="1">s</span>Address;
+    public $Headquarte<span class="fragment highlight-red" data-fragment-index="1">rs</span>Address;
 }
 
 // code métier
 $tmp = new \MangoPay\UserLegal();
-$tmp->HeadquarterAddress = new \MangoPay\Address();
-$tmp->HeadquarterAddress->City = 'Lyon';
+$tmp->Headquarte<span class="fragment highlight-red" data-fragment-index="1">r</span>Address = new \MangoPay\Address();
+$tmp->Headquarte<span class="fragment highlight-red" data-fragment-index="1">r</span>Address->City = 'Lyon';
                         </code></pre>
 
                         <div class="fragment error"  data-fragment-index="1">
@@ -543,11 +543,15 @@ $tmp->HeadquarterAddress->City = 'Lyon';
     $anArray = [];
     
     foreach ($iterable as $item) {
-        $<span class="fragment highlight-red">get</span>AnArray[] = $item;
+        $<span class="fragment highlight-red" data-fragment-index="1">get</span>AnArray[] = $item;
     }
     
     return $anArray;
 }</code></pre>
+
+                        <div class="fragment error" data-fragment-index="1">
+                            Implicit array creation is not allowed - variable $getAnArray might not exist.
+                        </div>
 
                         <aside class="notes">
                             Une variable mal nomée !<br />
@@ -557,8 +561,115 @@ $tmp->HeadquarterAddress->City = 'Lyon';
                     </section>
                 </section>
 
+                <section>
+                    <section>
+                        <h2>
+                            PHP++
+                        </h2>
+                    </section>
+                    <section id="php-plus-plus">
+                        <h4>Docstring</h4>
+                        <pre><code class="hljs php" data-trim data-noescape>/**
+ * @param array&lt;int&gt; $anArrayOfInt
+ */
+function doStuff(array $anArrayOfInt) {
+  foreach ($anArrayOfInt as $anInt) {
+    echo strtoupper($anInt);
+  }
+}</code></pre>
 
+                        <div class="error" data-fragment-index="1">
+                            Parameter #1 $str of function strtoupper expects string, int given.
+                        </div>
 
+                        <aside class="notes">
+                            La docstring permet de donner plus de détail que le language ne sait pas traiter
+                        </aside>
+                    </section>
+
+                    <section id="multiple-types">
+                        <h4>Types multiples</h4>
+                        <pre><code class="hljs php" data-trim data-noescape>use Doctrine\Common\Persistence\Collections\Collection;
+	
+/**
+ * @var array&lt;int&gt;|Collection&lt;int&gt; $var
+ */
+function doStuff($var) {
+  if ($var instanceof Collection) {
+    $var = $var->toArray();
+  }
+  
+  // `$var` sera reconnu comme un tableau de int
+  // `$var` will be knonw  as an array of int
+}</code></pre>
+
+                        <aside class="notes">
+                            Ou bien même de gérer des types différents
+                        </aside>
+                    </section>
+
+                    <section id="covariance">
+                        <h4>Covariance</h4>
+                        <h5>PHP 7.4+</h5>
+                        <pre><code class="hljs php" data-trim data-noescape>interface Factory {
+    function make(): object;
+}
+
+class UserFactory implements Factory {
+    function make(): User;
+}</code></pre>
+                        <h5>En attendant</h5>
+                        <pre><code class="hljs php" data-trim data-noescape>class UserFactory implements Factory {
+    /**
+     * @return User
+     */
+    function make(): object;
+}</code></pre>
+
+                        <a href="https://wiki.php.net/rfc/covariant-returns-and-contravariant-parameters"
+                           target="_blank"
+                           rel="noopener noreferer">
+                            🔗 RFC Covariance / contravariance
+                        </a>
+
+                        <aside class="notes">
+                            Covariance : type de retour plus précis (User &gt; object)<br />
+                            Contravariance : paramètre d'entrée plus "large" que celui de l'interface
+                        </aside>
+                    </section>
+                </section>
+
+                <section id="quotes">
+                    <section>
+                        <h1>
+                            Citations
+                        </h1>
+                        <h6>
+                            (presques pas modifiées)
+                        </h6>
+                    </section>
+
+                    <section>
+                        <blockquote>
+                            Put**n il fait ch**r PHPStan... 😡<br />
+                            ...non mais en fait il a raison ! 😕
+                        </blockquote>
+                    </section>
+
+                    <section>
+                        <blockquote>
+                            Bon je vais mettre PHPStan sur ce projet :<br />
+                            il y a trop de trucs pétés 😥
+                        </blockquote>
+                    </section>
+
+                </section>
+
+                <section id="questions">
+                    <h2>
+                        Des questions ?
+                    </h2>
+                </section>
             </div>
         </div>
 
@@ -572,13 +683,44 @@ $tmp->HeadquarterAddress->City = 'Lyon';
 Reveal.configure({
     slideNumber: 'c/t',
 });
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+
 Reveal.initialize({
 
     dependencies: [
         { src: 'plugin/markdown/marked.js' },
         { src: 'plugin/markdown/markdown.js' },
         { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                ready(function() {
+                    hljs.initHighlighting();
+
+                    // // Rebuild ...
+                    // var pre = document.querySelectorAll('pre'),
+                    //     code, data, html;
+
+                    // for (var i = 0, len = pre.length; i < len; ++i) {
+                    //     code = pre[i].firstChild;
+                    //     if (/(^| )hljs( |$)/.test(code.className)) {
+                    //         data = code.innerHTML;
+                    //         html = '<code class="' + code.className + '">' + data + '</code>';
+                    //         html += '<span class="line-number-clear"></span>';
+                    //         pre[i].innerHTML = html;
+                    //     }
+                    // }
+                })
+            }
+        },
         {
             src: 'node_modules/twemoji/2/twemoji.min.js',
             async: true,
