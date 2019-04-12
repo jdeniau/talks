@@ -261,14 +261,6 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                             statique
                         </div>
                     </div>
-                    <aside class="notes">
-                        <ul>
-                            <li> Les tests servent à valider qu'un système fonctionne
-                            <li> Ils évitent les régressions
-                            <li> Ils ne doivent pas servir à tester du code qui ne compilerait même pas dans un autre langage (tester qu'une erreur est bien retournée si on envoie `null` ou le mauvais type)
-                                <li> PHP est "permissif", mais peut du coup amener des comportements étrange, ou bien un grand nombre de ligne de code inutile
-                        </ul>
-                    </aside>
                 </section>
 
                 <section id="static-analyzer">
@@ -313,7 +305,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
                         <aside class="notes">
                         <ul>
-                            <li>Un framework de test (unitaire, fonctionnel, ou autre),
+                            <li>Un framework de test (unitaire, fonctionnel, ou autre),<br />
+                                D'ailleurs, il va vous permettre de trouver des bugs sans écrire de tests supplémentaire
                             <li>Du code qui s'exécute (vous attendez un string, vous envoyez un tableau, il ne va pas "prendre la main" pour envoyer une exception avant la fatal PHP),
                             <li>Magique : il ne devine pas ce que vous ne lui dites pas
                         </ul>
@@ -346,10 +339,10 @@ PHP Warning:  strtoupper() expects parameter 1 to be string, array given
                         <aside>
                     </section>
 
-                    <section id="current">
-                        <pre><code class="hljs php" data-trim>class Foo {
+                    <section id="typed-property">
+                        <pre><code class="hljs php" data-trim data-noescape>class Foo {
     /**
-     * @var array
+     * @var <span class="fragment highlight-red" data-fragment-index="1">array</span>
      */
     private $bar;
     
@@ -358,13 +351,13 @@ PHP Warning:  strtoupper() expects parameter 1 to be string, array given
     }
     
     public function getBar() {
-        return strtoupper($this->bar);
+        return <span class="fragment highlight-red" data-fragment-index="1">strtoupper($this->bar)</span>;
     }
 }
 
 $foo = new Foo(['io']);
 $foo->getBar();</code></pre>
-                        <div class="fragment error">
+                        <div class="fragment error" data-fragment-index="1">
                             [ERROR] Parameter #1 $str of function strtoupper expects string, array given.
                         </div>
                         <aside class="notes">
@@ -379,7 +372,7 @@ $foo->getBar();</code></pre>
                     </section>
 
                     <section id="compile-errors">
-                        <pre><code class="hljs php" data-trim data-noescape>function sayHello(string $who): string {
+                        <pre><code class="hljs php" data-trim data-noescape>function sayHello(<span class="fragment highlight-red" data-fragment-index="1">string</span> $who): string {
     return 'Hello ' . strtoupper($who);
 }
 
@@ -600,7 +593,7 @@ function doStuff($var) {
   }
   
   // `$var` sera reconnu comme un tableau de int
-  // `$var` will be knonw  as an array of int
+  <!--// `$var` will be known  as an array of int-->
 }</code></pre>
 
                         <aside class="notes">
@@ -639,27 +632,86 @@ class UserFactory implements Factory {
                     </section>
                 </section>
 
+                <section id="benefits">
+                    <section>
+                        <h2>
+                            Validation graduelle
+                        </h2>
+
+                        <h5>
+                            Niveau de 0 à 7 + règles additionelles
+                        </h5>
+                    </section>
+
+                    <section>
+                        <h2>
+                            PHPStan est rapide
+                        </h2>
+
+                        <h5>
+                            700 fichiers en 30 secondes
+                        </h5>
+                    </section>
+
+                    <section>
+                        <h5>
+                            Rien à faire de plus que d'écrire et (bien) documenter votre code
+                        </h5>
+                    </section>
+                </section>
+
+                <section id="concurrents">
+                    <h2>Concurrence ?</h2>
+                    <p>
+                        <img data-src="/images/GitHub-Mark.png" width="50px" class="image-like-text" />
+                        <a href="https://github.com/vimeo/psalm" rel="noopener noreferer" target="_blank">
+                            vimeo/psalm
+                        </a>
+                    </p>
+
+                    <p>
+                        <img data-src="/images/GitHub-Mark.png" width="50px" class="image-like-text" />
+                        <a href="https://github.com/phan/phan" rel="noopener noreferer" target="_blank">
+                            phan/phan
+                        </a>
+                    </p>
+
+                    <h5>
+                        Lequel utiliser ?
+                    </h5>
+                    <p>
+                        <a href="https://badootech.badoo.com/php-code-static-analysis-based-on-the-example-of-phpstan-phan-and-psalm-a20654c4011d"
+                            rel="noopener noreferer"
+                            target="_blank"
+                        >
+                            Comparatif par Badoo tech
+                        </a>
+                    </p>
+
+                        <aside class="notes">
+                            <li>PHPStan : rapide, simple, fonctionne bien avec Doctrine, Symfony, etc.
+                            <li>Phan : très efficace, mais peut donner des faux positifs, parse toute la base de code
+                            <li>Psalm : Typage avancé (types "generiques")
+                        </aside>
+                </section>
+
                 <section id="quotes">
                     <section>
                         <h1>
                             Citations
                         </h1>
-                        <h6>
-                            (presques pas modifiées)
-                        </h6>
                     </section>
 
                     <section>
                         <blockquote>
-                            Put**n il fait ch**r PHPStan... 😡<br />
-                            ...non mais en fait il a raison ! 😕
+                            … chiant au début quand on connait pas […] un peu comme quand tu découvres les tests :<br />
+                            puis quelques mois après tu lances des deploy en sirotant un petit kir cassis…
                         </blockquote>
                     </section>
-
                     <section>
                         <blockquote>
-                            Bon je vais mettre PHPStan sur ce projet :<br />
-                            il y a trop de trucs pétés 😥
+                            …un peu contraignant mais si on pèse le pour et le contre ça en vaut le détour. <br />
+                            L'investissement valait le coup, le code est plus propre…
                         </blockquote>
                     </section>
 
