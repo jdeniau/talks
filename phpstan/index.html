@@ -30,30 +30,45 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
     </head>
     <body>
         <div class="reveal">
-            <div class="slides">
-                <section data-markdown>
-                    <script type="text/template">
-## Explorez votre code avec de l'analyse statique
-                    </script>
+            <div class="slides"
+            >
+                <section
+                    data-background-image="images/pirates/IMG_20181209_120209.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.3"
+                    >
+                    <h2 data-trans-en="Explore your code with static analysis">
+                        Explorez votre code avec de l'analyse statique
+                    </h2>
                 </section>
 
                 <section>
-                <section id="my-name-is">
-                    <p>Je m'appelle Julien Deniau</p>
+                <section id="my-name-is"
+                    data-background-image="images/pirates/IMG_20181209_120653.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.3"
+                >
+                <p data-trans-en="My name is Julien Deniau">Je m'appelle Julien Deniau</p>
                     <p>
-                        Je suis un vieux…
-                        <span class="fragment fade-left" style="display: inline-block;">
+                        <span data-trans-en="I'm an old">
+                            Je suis un vieux…
+                        </span>
+                        <span class="fragment fade-left" style="display: inline-block;" data-trans-en="developper">
                             codeur
                         </span>
                     </p>
                 </section>
 
-                <section>
-                    <p>J'ai codé mes premiers sites :</p>
+                <section
+                    data-background-image="images/pirates/IMG_20181209_121329.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.3"
+                >
+                    <p data-trans-en="I did code for the first time:">J'ai codé mes premiers sites :</p>
                     <ul>
-                        <li>sur membres.lycos.fr</li>
-                        <li>en PHP 3</li>
-                        <li>avec Macromedia Dreamweaver</li>
+                        <li data-trans-en="on membres.lycos.fr">sur membres.lycos.fr</li>
+                        <li data-trans-en="in PHP 3">en PHP 3</li>
+                        <li data-trans-en="with Macromedia Dreamweaver">avec Macromedia Dreamweaver</li>
                     </ul>
 
                     <aside class="notes">
@@ -62,20 +77,24 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     </aside>
                 </section>
 
-                <section id="aventure">
+                <section id="aventure"
+                    data-background-image="images/pirates/IMG_20181209_120404.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.3"
+                >
                     <ul>
-                    <li>Pas de fichier ".h" du C</li>
-                    <li>Pas de `System.out.println()` du Java</li>
-                    <li>
-                    <pre><code class="hljs php" data-trim>
-                    echo '&lt;html&gt;'; // et c'est parti !
-                    </code></pre>
-                    </li>
+                        <li data-trans-en='no ".h" files from C language'>Pas de fichier ".h" du C</li>
+                        <li data-trans-en='no `System.out.println()` from Java'>Pas de `System.out.println()` du Java</li>
+                        <li>
+                            <pre><code class="hljs php" data-trim data-noescape>
+                                echo '&lt;html&gt;'; // <span data-trans-en='here we go!'>et c'est parti !</span>
+                            </code></pre>
+                        </li>
                     </ul>
 
                     <h3 class="fragment">
                         <br />
-                    Bref, PHP c'était l'aventure
+                        <span data-trans-en="Well, PHP was adventure!"> Bref, PHP c'était l'aventure !</span>
                     </h3>
                 </section>
                 </section>
@@ -87,18 +106,24 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     data-background-size="contain"
                 >
                     <!--
-                    <p>Bon c'est vrai, des fois il fallait comprendre</p>
                     -->
                     <blockquote style="background: rgba(255, 255, 255, 0.8)">
                         Parse error: syntax error, unexpected T_PAAMAYIM_NEKUDOTAYIM
                     </blockquote>
 
                     <aside class="notes">
-                        L'impression d'être Altaïr dans Assassin's Creed<br />
+                        <p data-trans-en="OK, some times we needed to understand this">Bon c'est vrai, des fois il fallait comprendre ça</p>
+                        <span data-trans-en="Feel like Altaïr in Assassin's creed">L'impression d'être Altaïr dans Assassin's Creed</span><br />
 
                         <br />
-                        <i>Nom officiel de l'opérateur de résolution de portée (::) utilisé en PHP pour accéder aux membres statiques ou constants d'une classe.<br />
-                            Il s'utilise par la syntaxe `Classe::Element`</i>
+                        <i>
+                            <span data-trans-en="Official name of the Scope Resolution Operator (::) used to access static member or constant of a class.">
+                                Nom officiel de l'opérateur de résolution de portée (::) utilisé en PHP pour accéder aux membres statiques ou constants d'une classe.
+                            </span><br />
+                            <span data-trans-en="Usage syntax is `Class::Element`">
+                                Il s'utilise par la syntaxe `Classe::Element`
+                            </span>
+                        </i>
                     </aside>
 
                 </section>
@@ -111,7 +136,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <blockquote style="background: rgba(255, 255, 255, 0.8)">
                     PHP Parse error: syntax error, unexpected '$a' (T_VARIABLE) on line 6
                     </blockquote>
-                    <aside class="notes">
+                    <aside class="notes" data-trans-en="What fun did we had to find out that in fact, we should have looked at line 5 from the start">
                         Quel plaisir de fouiller pour trouver qu'en fait, il fallait regarder la ligne 5 !
                     </aside>
                 </section>
@@ -119,49 +144,63 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 <section
                     id="freedom"
                     data-background-image="images/tomb-raider.png"
-                    data-background-opacity="0.6"
+                    data-background-opacity="0.4"
                     data-background-size="contain"
                 >
-                    <h2>Mais la liberté du langage était tellement belle...</h2>
+                    <h2 data-trans-en="But the freedom of the language was so beautifull…">Mais la liberté du langage était tellement belle…</h2>
                 </section>
 
-                <section id="">
+                <section
+                    data-background-image="images/pirates/IMG_20181209_120837.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.3"
+                >
                         PHP Fatal error: Uncaught Error:<br />
                         Call to a member function getTitle() on null
                     
-                    <aside class="notes">
+                    <aside class="notes"
+                           data-trans-en="OK, after 10 years of adventures, some PHP version, and some code lines later, I did understand that I was not an adventurer"
+                    >
                         oui bon OK, ap 10 ans d'aventures, quelques versions de PHP, et quelques lignes de codes plus tard, je me suis rendu compte que je n'étais pas un aventurier
-
                     </aside>
                 </section>
                 </section>
 
                 <section>
-                <section>
+                <section
+                    id="compas"
+                    data-background-image="images/pirates/map.png"
+                    data-background-size="contain"
+                    data-background-opacity="0.2"
+                >
                     <p>
                         👍 
-                        voyager
+                        <span data-trans-en="travel">voyager</span>
                     </p>
                     <p>
                         ♥
-                        avec un compas
+                        <span data-trans-en="with a map">avec une carte</span>
                     </p>
-                    <aside class="notes">
-                        J'aime voyager, mais j'aime avoir un compas pour me guider ; (une carte ?)
+                    <aside class="notes" data-trans-en="I love travel, but I like having a map (compas?) to guide me">
+                        J'aime voyager, mais j'aime avoir une carte pour me guider ; (un compas ?)
                     </aside>
                 </section>
 
-                <section>
+                <section
+                    data-background-image="images/pirates/IMG_20181209_120857.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.3"
+                >
                     <p>
                          👍
-                         découvrir
+                         <span data-trans-en="discover">découvrir</span>
                     </p>
                     <p>
                     ♥
-                        comprendre avec un dictionnaire
+                    <span data-trans-en="understand with a dictionnary">comprendre avec un dictionnaire</span>
                     </p>
-                    <aside class="notes">
-                        J'aime découvrir, mais j’apprécie avoir une pierre philosophale pour comprendre ; (un dictionnaire ?)
+                    <aside class="notes" data-trans-en="I love to discover, but I like a dictonnary to understand">
+                        J'aime découvrir, mais j’apprécie avoir un dictionnaire pour comprendre
                     </aside>
                 </section>
                 <section
@@ -169,11 +208,11 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 >
                     <p>
                         👍
-                        construire
+                        <span data-trans-en="build">construire</span>
                     </p>
                     <p>
                         ♥
-                        manuel
+                        <span data-trans-en="manual">manuel</span>
                     </p>
                     <p>
                     <img src="images/ikea.jpg" />
@@ -182,32 +221,44 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 </section>
 
                 <section>
-                <section id="explorer">
+                <section id="explorer"
+                    data-background-image="images/pirates/IMG_20181209_120537.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.3"
+                >
                     <h3>
                         <p>
-                        <strike>
+                        <strike data-trans-en="I am a adventurer">
                             Je suis un aventurier
                         </strike>
                         </p>
-                        <p>
+                        <p data-trans-en="I am an explorer">
                             Je suis un explorateur.
                         </p>
                     </h3>
 
                 </section>
 
-                <section>
+                <section
+                    data-background-image="images/pirates/IMG_20181209_120450.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.3"
+                >
                     <p>
-                    <strong>Aventurier :</strong> seul avec ses bytes et son couteau
+                    <strong data-trans-en="Adventuter:">Aventurier :</strong> <span data-trans-en="alone with his bare hands">seul avec ses bytes et son couteau</span>
                     </p>
                     <p class="fragment">
-                    <strong>Explorateur :</strong> Aller fouiller avec les outils adaptés
+                    <strong data-trans-en="Explorer:">Explorateur :</strong> <span data-trans-en="Go search with the right tools">aller fouiller avec les outils adaptés</span>
                     </p>
                 </section>
                 </section>
 
                 <section>
-                    <section id="tests">
+                    <section id="tests"
+                        data-background-image="images/pirates/IMG_20181209_121122.jpg"
+                        data-background-size="cover"
+                        data-background-opacity="0.2"
+                    >
                         <h2>Les outils<br /></h2>
                         <div class="round-container">
                             <div class="round-tests">
@@ -217,17 +268,22 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         </div>
                         <aside class="notes">
                             <ul>
-                                <li> Les tests servent à valider qu'un système fonctionne
-                                <li> Ils évitent les régressions
-                                <li> Ils ne doivent pas servir à tester du code qui ne compilerait même pas dans un autre langage (tester qu'une erreur est bien retournée si on envoie `null` ou le mauvais type)
-                                    <li> PHP est "permissif", mais peut du coup amener des comportements étrange, ou bien un grand nombre de ligne de code inutile
+                                <li data-trans-en="Tests are usefull to check that a system is working"> Les tests servent à valider qu'un système fonctionne
+                                <li data-trans-en="They prevent regressions"> Ils évitent les régressions
+                                <li data-trans-en="They should not be used to test code that would not compile in other languages (test that an error is throwned if we send `null` or a wrong type)">
+                                    Ils ne doivent pas servir à tester du code qui ne compilerait même pas dans un autre langage (tester qu'une erreur est bien retournée si on envoie `null` ou le mauvais type)
+                                <li data-trans-en="PHP is permissive, but can create weird comportments, or a huge number of useless lines"> PHP est "permissif", mais peut du coup amener des comportements étrange, ou bien un grand nombre de ligne de code inutile
                             </ul>
                         </aside>
                     </section>
 
-                    <section>
-                        <p>PHP 7 : structuration du langage, typage statique</p>
-                        <p>Plus de méthode avec paramètre inconnu !</p>
+                    <section
+                        data-background-image="images/pirates/IMG_20181209_120918.jpg"
+                        data-background-size="cover"
+                        data-background-opacity="0.3"
+                    >
+                        <p data-trans-en="PHP 7: more strict langage, static types">PHP 7 : structuration du langage, typage statique</p>
+                        <p data-trans-en="No more unknown parameters in functions!">Plus de méthode avec paramètre inconnu !</p>
                         <div class="fragment">
                             <br />
                             <pre><code class="hljs shell" data-trim>
@@ -235,30 +291,42 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                                 must be of the type string or null, integer given
                             </code></pre>
                             ↓
-                            <div>
+                            <div data-trans-en="Fatal in production!">
                                 Fatal en prod !
                             </div>
                         </div>
 
                         <aside class="notes">
-                            Au fur et à mesure des versions de PHP, le langage se "structure" de plus en plus,<br />
-                            et intègre du typage statique.<br />
-                            C'est bien ! Plus de méthode avec paramètres inconnu...<br />
+                            <div data-trans-en="As far as PHP go, the language become more strict,">
+                                Au fur et à mesure des versions de PHP, le langage se "structure" de plus en plus,
+                            </div>
+                            <div data-trans-en="and embed static types.">
+                                et intègre du typage statique.
+                            </div>
+                            <div data-trans-en="That's good news! No more unknown parameters in function calls…">
+                                C'est bien ! Plus de méthode avec paramètres inconnu...
+                            </div>
                             <br />
-                            `Type error` → Fatar erreur en prod !
+                            <div data-trans-en="`Type error` → Fatal in production!">
+                                `Type error` → Fatal erreur en prod !
+                            </div>
                         </aside>
                     </section>
                 </section>
 
-                <section id="tools">
+                <section id="tools"
+                    data-background-image="images/pirates/IMG_20181209_121122.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.2"
+                >
                     <h2>Les outils<br /></h2>
                     <div class="round-container">
                         <div class="round-tests">
                             Tests
                         </div>
                         <div class="round-phpstan fragment">
-                            Analyse <br />
-                            statique
+                            <div data-trans-en="Static">Analyse</div>
+                            <div data-trans-en="Analysis">statique</div>
                         </div>
                     </div>
                 </section>
@@ -266,13 +334,13 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 <section id="static-analyzer">
                     <section>
                         <ul>
-                            <li>Analyseur : Il "lit" le code,
-                            <li>Statique : il n'exécute pas le programme
+                            <li data-trans-en='Analysis: "read" the code,'>Analyseur : Il "lit" le code,
+                            <li data-trans-en="Static: Does not execute the program">Statique : il n'exécute pas le programme
                         </ul>
                     </section>
 
                     <section>
-                        <h2>Des dizaines d'analyseurs statiques</h2>
+                        <h2 data-trans-en="Tens of satic analysis tools">Des dizaines d'analyseurs statiques</h2>
                         <div> 
                             <img data-src="/images/GitHub-Mark.png" width="150px" class="image-like-text" />
                             <a href="https://github.com/exakat/php-static-analysis-tools" rel="noopener noreferer" target="_blank">
@@ -281,34 +349,44 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         </div>
                         <aside class="notes">
                             <ul>
-                                <li> Détection de code mort, de bugs,
-                                <li> linter,
-                                <li> standard de code,
-                                <li> métriques,
+                                <li data-trans-en="Dead code, bug detection,"> Détection de code mort, de bugs,
+                                <li data-trans-en="linters"> linter,
+                                <li data-trans-en="code standard"> standard de code,
+                                <li data-trans-en="metrics"> métriques,
                                 <li> etc.
                             </ul>
                         </aside>
                     </section>
 
-                    <section id="phpstan">
+                    <section id="phpstan"
+                    data-background-image="images/pirates/IMG_20181209_120716.jpg"
+                    data-background-size="cover"
+                    data-background-opacity="0.3"
+                    >
                         <h2>PHPStan</h2>
                         <h3>PHP Static Analysis Tool</h3>
                     </section>
 
-                    <section>
-                        <h2>PHPStan n'est pas</h2>
+                    <section
+                        data-background-image="images/pirates/IMG_20181209_120154.jpg"
+                        data-background-size="cover"
+                        data-background-opacity="0.3"
+                    >
+                        <h2 data-trans-en="PHPSTan is not:">PHPStan n'est pas</h2>
                         <ul>
-                            <li>Un framework de test,
-                            <li>Du code qui s'exécute,
-                            <li>Magique : il ne devine pas ce que vous ne lui dites pas
+                            <li data-trans-en="A test framework">Un framework de test,
+                            <li data-trans-en="Code that did execute">Du code qui s'exécute,
+                            <li data-trans-en="Magic: it does not guess what you don't tell him">Magique : il ne devine pas ce que vous ne lui dites pas
                         </ul>
 
                         <aside class="notes">
                         <ul>
-                            <li>Un framework de test (unitaire, fonctionnel, ou autre),<br />
-                                D'ailleurs, il va vous permettre de trouver des bugs sans écrire de tests supplémentaire
-                            <li>Du code qui s'exécute (vous attendez un string, vous envoyez un tableau, il ne va pas "prendre la main" pour envoyer une exception avant la fatal PHP),
-                            <li>Magique : il ne devine pas ce que vous ne lui dites pas
+                            <li>
+                                <span data-trans-en="A test framework (unit, functional, etc.)">Un framework de test (unitaire, fonctionnel, ou autre),</span><br />
+                                <span data-trans-en="In fact, it will allow you to detect bugs without writing any more tests">D'ailleurs, il va vous permettre de trouver des bugs sans écrire de tests supplémentaire</span>
+                            <li data-trans-en='Code that did execute (you wait for a string, you send an array, it will not take over to send an exception before the PHP fatal error)'>
+                                Du code qui s'exécute (vous attendez un string, vous envoyez un tableau, il ne va pas "prendre la main" pour envoyer une exception avant la fatal PHP),
+                            <li data-trans-en="Magic: it does not guess what you don't tell him">Magique : il ne devine pas ce que vous ne lui dites pas
                         </ul>
                         </aside>
                     </section>
@@ -334,7 +412,7 @@ $foo->getBar();</code></pre>
                         <div class="fragment error" data-fragment-index="2">
 PHP Warning:  strtoupper() expects parameter 1 to be string, array given
                         </div>
-                        <aside class="notes">
+                        <aside class="notes" data-trans-en="PHPStan won't send an error because $bar is consider as `mixed`">
                             PHPStan ne va pas vous remonter d'erreur car $bar est considéré comme `mixed`
                         <aside>
                     </section>
@@ -360,7 +438,7 @@ $foo->getBar();</code></pre>
                         <div class="fragment error" data-fragment-index="1">
                             [ERROR] Parameter #1 $str of function strtoupper expects string, array given.
                         </div>
-                        <aside class="notes">
+                        <aside class="notes" data-trans-en="But if $bar is marked as an array, then you will get an error.">
                             Par contre si $bar est typé comme un tableau, alors là vous allez avoir une erreur.
                         <aside>
                     </section>
@@ -368,7 +446,7 @@ $foo->getBar();</code></pre>
 
                 <section>
                     <section>
-                        <h2>Les erreurs "de compilation"</h2>
+                        <h2 data-trans-en="Compilation errors">Les erreurs "de compilation"</h2>
                     </section>
 
                     <section id="compile-errors">
@@ -387,7 +465,7 @@ sayHello($julien);
                     </section>
 
                     <section id="wrong-interface-call">
-                        <h4>Mauvaise fonction appelée</h4>
+                        <h4 data-trans-en="Wrong called functions">Mauvaise fonction appelée</h4>
                         <pre><code class="hljs php" data-trim data-noescape>interface FooInterface {}
 
 class Foo implements FooInterface {
@@ -408,16 +486,20 @@ dumpFoo($foo);</code></pre>
                         </div>
 
                         <aside class="notes">
-                            Il sait très bien remonter des erreurs quand vous appelez des fonctions qui ne sont pas définit dans une interface par exemple.
+                            <span data-trans-en="It knows that you are trying to call a function that is now defined in an interface">
+                                Il sait très bien remonter des erreurs quand vous appelez des fonctions qui ne sont pas définit dans une interface par exemple.
+                            </span>
 
                             <br />
                             <br />
+                            <span data-trans-en="This example seems silly because it is too simple, but you probably have this kind of case in your code ">
                             Là l'exemple parait "bidon" car il est simplifié, mais il est probable que vous ayez ce genre de cas dans votre code
+                            </span>
                         <aside>
                     </section>
 
                     <section id="wrong-interface-call-doctrine">
-                        <h4>Mauvaise fonction appelée</h4>
+                        <h4 data-trans-en="Wrong called functions">Mauvaise fonction appelée</h4>
                         <pre><code class="hljs php" data-trim>use Doctrine\Common\Persistence\ObjectManager;
 
 function doStuff(ObjectManager $entityManager)
@@ -428,25 +510,40 @@ function doStuff(ObjectManager $entityManager)
     ->getResult();
 }</code></pre>
                         <div class="fragment">
-                            Un <code>ObjectManager</code> n'a pas de méthode <code>createQueryBuilder</code>.<br />
-                            Cette méthode fait partie de <code>Doctrine\ORM\EntityManagerInterface</code>
+                            <div>
+                                <span data-trans-en="An">Un</span>
+                                <code>ObjectManager</code>
+                                <span data-trans-en="does not have a">n'a pas de méthode</span>
+                                <code>createQueryBuilder</code>
+                                <span data-trans-en="method"></span>.
+                            </div>
+                            <div>
+                                <span data-trans-en="This method belongs to">Cette méthode fait partie de</span>
+                                <code>Doctrine\ORM\EntityManagerInterface</code>
+                            </div>
                         </div>
 
                         <aside class="notes">
-                            C'est nettement moins trivial quand on utilise une librairie externe, Doctrine par exemple.<br />
-                            ou bien un code métier complexe.
+                            <div data-trans-en="It is less trivial if you use an exteyrnal library, like Doctrine for example.">
+                                C'est nettement moins trivial quand on utilise une librairie externe, Doctrine par exemple.
+                            <div>
+                            <div data-trans-en="or in a complex business logic">
+                                ou bien un code métier complexe.
+                            </div>
                             <br /><br />
-                            Le fait d'avoir un code "propre" vous permettra de "changer" des choses très facilement, sans avoir à (re)comprendre des tests
+                            <div data-trans-en='Having a "clean" code will allow you to "change" things really easily, without having to (re-)understand your tests'>
+                                Le fait d'avoir un code "propre" vous permettra de "changer" des choses très facilement, sans avoir à (re)comprendre des tests
+                            </div>
                         <aside>
                     </section>
                 </section>
 
                 <section>
                     <section id="keep-your-code-clean">
-                        <h2>Garder son code propre</h2>
+                        <h2 data-trans-en="Keep your code clean">Garder son code propre</h2>
                     </section>
                     <section>
-                        <h4>Tests inutiles</h4>
+                        <h4 data-trans-en="Useless tests">Tests (conditionnel) inutiles</h4>
                         <pre><code class="hljs php" data-trim data-noescape>class Foo { public $id = 1; }
 
 function getFoo(): Foo
@@ -464,15 +561,19 @@ $foo = getFoo();
                             [ERROR] If condition is always true.
                         </div>
                         <aside class="notes">
-                            En parlant de code "propre", il est possible que vous ayez déjà rencontré ce genre de code.
-                            <br />
-                            On peut faire ce genre de test parce que "comme ça on est sur" ou bien simplement parce que `getFoo` pouvait retourner `null` avant, mais ce n'est plus le cas.
-                            <br />
-                            PHPStan va ici vous aider à garder votre code propre en évitant les tests inutiles
+                            <div data-trans-en="Talking about clean code, you may already encounter this kind of code.">
+                                En parlant de code "propre", il est possible que vous ayez déjà rencontré ce genre de code.
+                            </div>
+                            <div data-trans-en='We can do this kind of tests "to be sure", or simply because `getFoo` could return `null` before, but not anymore.'>
+                                On peut faire ce genre de test parce que "comme ça on est sur" ou bien simplement parce que `getFoo` pouvait retourner `null` avant, mais ce n'est plus le cas.
+                            </div>
+                            <div data-trans-en="PHPStan will help you keep you code clean here to avoid unecessary tests">
+                                PHPStan va ici vous aider à garder votre code propre en évitant les tests inutiles
+                            </div>
                         </aside>
                     </section>
                     <section id="casting">
-                        <h4>Conversions inutiles...</h4>
+                        <h4 data-trans-en="Useless casting">Conversions inutiles...</h4>
                         <pre><code class="hljs php" data-trim data-noescape>$a = (int) 8 % 3; </code></pre>
                         <div class="error">
                             [ERROR] Casting to int something that's already int.
@@ -488,8 +589,12 @@ $foo = getFoo();
                         </div>
 
                         <aside class="notes">
-                            On évite aussi de caster inutilement.<br />
+                            <div data-trans-en="We avoid useless casting">
+                            On évite aussi de caster inutilement.
+                            </div>
+                            <div data-trans-en="or NOT to cast when needed">
                             Ou de ne pas caster quand c'est requis !
+                            </div>
                         </aside>
 
                     </section>
@@ -497,12 +602,12 @@ $foo = getFoo();
 
                 <section>
                     <section>
-                        <h2>
+                        <h2 data-trans-en="Avoid typos">
                             Eviter les fautes de frappe
                         </h2>
                     </section>
                     <section id="mangopay">
-                        <pre><code class="hljs php" data-trim data-noescape>// librairie externe
+                        <pre><code class="hljs php" data-trim data-noescape><span data-trans-en="// external library">// librairie externe</span>
 namespace MangoPay;
 class Address {
     public $City;
@@ -512,7 +617,7 @@ class UserLegal {
     public $Headquarte<span class="fragment highlight-red" data-fragment-index="1">rs</span>Address;
 }
 
-// code métier
+<span data-trans-en="// business logic">// code métier</span>
 $tmp = new \MangoPay\UserLegal();
 $tmp->Headquarte<span class="fragment highlight-red" data-fragment-index="1">r</span>Address = new \MangoPay\Address();
 $tmp->Headquarte<span class="fragment highlight-red" data-fragment-index="1">r</span>Address->City = 'Lyon';
@@ -523,10 +628,18 @@ $tmp->Headquarte<span class="fragment highlight-red" data-fragment-index="1">r</
                         </div>
 
                         <aside class="notes">
-                            On évite les fautes de frappe aussi :<br />
-                            PHP permet d'ajouter a la volée des propriétés à un objet en publique et n'envoie même pas de warning<br />
-                            Un exemple avec de vrai code trouvé chez nous !<br />
+                            <div data-trans-en="We avoid typos too:">
+                            On évite les fautes de frappe aussi :
+                            </div>
+                            <div data-trans-en="PHP allows you to add public properties 'live' to an object and does not send any warning">
+                            PHP permet d'ajouter a la volée des propriétés à un objet en publique et n'envoie même pas de warning
+                            </div>
+                            <div data-trans-en="A real example found in our codebase">
+                            Un exemple avec de vrai code trouvé chez nous !
+                            </div>
+                            <div data-trans-en="…so we lost some data here">
                             Du coup on a perdu quelques données non enregistrée
+                            </div>
                         </aside>
                     </section>
 
@@ -633,7 +746,11 @@ class UserFactory implements Factory {
                 </section>
 
                 <section id="benefits">
-                    <section>
+                    <section
+                        data-background-image="images/pirates/IMG_20181209_120358.jpg"
+                        data-background-size="cover"
+                        data-background-opacity="0.3"
+                    >
                         <h2>
                             Validation graduelle
                         </h2>
@@ -643,7 +760,11 @@ class UserFactory implements Factory {
                         </h5>
                     </section>
 
-                    <section>
+                    <section
+                        data-background-image="images/pirates/IMG_20181209_121240.jpg"
+                        data-background-size="cover"
+                        data-background-opacity="0.3"
+                    >
                         <h2>
                             PHPStan est rapide
                         </h2>
@@ -653,7 +774,11 @@ class UserFactory implements Factory {
                         </h5>
                     </section>
 
-                    <section>
+                    <section
+                        data-background-image="images/pirates/IMG_20181209_120849.jpg"
+                        data-background-size="cover"
+                        data-background-opacity="0.3"
+                    >
                         <h5>
                             Rien à faire de plus que d'écrire et (bien) documenter votre code
                         </h5>
@@ -664,15 +789,15 @@ class UserFactory implements Factory {
                     <h2>Concurrence ?</h2>
                     <p>
                         <img data-src="/images/GitHub-Mark.png" width="50px" class="image-like-text" />
-                        <a href="https://github.com/vimeo/psalm" rel="noopener noreferer" target="_blank">
-                            vimeo/psalm
+                        <a href="https://github.com/phan/phan" rel="noopener noreferer" target="_blank">
+                            phan/phan
                         </a>
                     </p>
 
                     <p>
                         <img data-src="/images/GitHub-Mark.png" width="50px" class="image-like-text" />
-                        <a href="https://github.com/phan/phan" rel="noopener noreferer" target="_blank">
-                            phan/phan
+                        <a href="https://github.com/vimeo/psalm" rel="noopener noreferer" target="_blank">
+                            vimeo/psalm
                         </a>
                     </p>
 
@@ -696,28 +821,46 @@ class UserFactory implements Factory {
                 </section>
 
                 <section id="quotes">
-                    <section>
+                    <section
+                        data-background-image="images/pirates/IMG_20181209_121258.jpg"
+                        data-background-size="cover"
+                        data-background-opacity="0.3"
+                    >
                         <h1>
                             Citations
                         </h1>
+                        <div>
+                            (De mes collègues)
+                        </div>
                     </section>
 
                     <section>
                         <blockquote>
-                            … chiant au début quand on connait pas […] un peu comme quand tu découvres les tests :<br />
-                            puis quelques mois après tu lances des deploy en sirotant un petit kir cassis…
+                            Au début, j’ai ressenti un mélange de frustration et de grand intérêt. […] Stan me mets régulièrement face à mes manquements.
+                            <div class="author">Thomas</div>
                         </blockquote>
                     </section>
                     <section>
                         <blockquote>
                             …un peu contraignant mais si on pèse le pour et le contre ça en vaut le détour. <br />
                             L'investissement valait le coup, le code est plus propre…
+                            <div class="author">Sylvère</div>
                         </blockquote>
                     </section>
-
+                    <section>
+                        <blockquote>
+                            … chiant au début quand on connait pas […] un peu comme quand tu découvres les tests :<br />
+                            puis quelques mois après tu lances des deploy en sirotant un petit kir cassis…
+                            <div class="author">Dimitri</div>
+                        </blockquote>
+                    </section>
                 </section>
 
-                <section id="questions">
+                <section id="questions"
+                        data-background-image="images/pirates/IMG_20181209_120217.jpg"
+                        data-background-size="cover"
+                        data-background-opacity="0.3"
+                >
                     <h2>
                         Des questions ?
                     </h2>
@@ -733,6 +876,7 @@ class UserFactory implements Factory {
 // - https://github.com/hakimel/reveal.js#configuration
 // - https://github.com/hakimel/reveal.js#dependencies
 Reveal.configure({
+    showSlideNumber: 'speaker',
     slideNumber: 'c/t',
 });
 
@@ -745,8 +889,10 @@ function ready(fn) {
 }
 
 Reveal.initialize({
+    controls: false,
 
     dependencies: [
+        { src: 'i18n.js' },
         { src: 'plugin/markdown/marked.js' },
         { src: 'plugin/markdown/markdown.js' },
         { src: 'plugin/notes/notes.js', async: true },

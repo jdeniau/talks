@@ -28,6 +28,7 @@ img.emoji  {
     color: #fff;
 }
 .round-phpstan {
+    flex-direction: column;
     margin-left: -50px!important;
     background: #069A8E;
     color: #fff;
@@ -73,3 +74,9 @@ img.emoji  {
     padding-right: 5px;
 }
 
+
+blockquote .author {
+    text-align: right;
+    color: #777;
+    font-size: .8em;
+}
