@@ -72,8 +72,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     </ul>
 
                     <aside class="notes">
-                        Sortie de PHP 4 : Mai 2000<br />
-                        Sortie de PHP 5 : Juillet 2004
+                        <span data-trans-en="PHP 4 was released in may 2000">Sortie de PHP 4 : Mai 2000</span><br />
+                        <span data-trans-en="PHP 5 was out in july 2004">Sortie de PHP 5 : Juillet 2004</span>
                     </aside>
                 </section>
 
@@ -259,7 +259,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         data-background-size="cover"
                         data-background-opacity="0.2"
                     >
-                        <h2>Les outils<br /></h2>
+                        <h2 data-trans-en="Tools">Les outils<br /></h2>
                         <div class="round-container">
                             <div class="round-tests">
                                 Tests
@@ -319,7 +319,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     data-background-size="cover"
                     data-background-opacity="0.2"
                 >
-                    <h2>Les outils<br /></h2>
+                    <h2 data-trans-en="Tools">Les outils<br /></h2>
                     <div class="round-container">
                         <div class="round-tests">
                             Tests
@@ -393,7 +393,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
                     <section>
                         <pre><code class="hljs php" data-trim data-noescape>class Foo {
-    <span class="fragment highlight-red" data-fragment-index="3">private $bar; <span class="fragment" data-fragment-index="3"> // considéré comme "@mixed"</span></span>
+    <span class="fragment highlight-red" data-fragment-index="3">private $bar; <span class="fragment" data-fragment-index="3" data-trans-en='// considered as "@mixed"'> // considéré comme "@mixed"</span></span>
     
     public function __construct(array $bar) {
         $this->bar = $bar;
@@ -524,16 +524,16 @@ function doStuff(ObjectManager $entityManager)
                         </div>
 
                         <aside class="notes">
-                            <div data-trans-en="It is less trivial if you use an exteyrnal library, like Doctrine for example.">
+                            <span data-trans-en="It is less trivial if you use an external library, like Doctrine for example.">
                                 C'est nettement moins trivial quand on utilise une librairie externe, Doctrine par exemple.
-                            <div>
-                            <div data-trans-en="or in a complex business logic">
+                            </span><br />
+                            <span data-trans-en="or in a complex business logic">
                                 ou bien un code métier complexe.
-                            </div>
-                            <br /><br />
-                            <div data-trans-en='Having a "clean" code will allow you to "change" things really easily, without having to (re-)understand your tests'>
+                            </span><br />
+                            <br />
+                            <span data-trans-en='Having a "clean" code will allow you to "change" things really easily, without having to (re-)understand your tests'>
                                 Le fait d'avoir un code "propre" vous permettra de "changer" des choses très facilement, sans avoir à (re)comprendre des tests
-                            </div>
+                            <span>
                         <aside>
                     </section>
                 </section>
@@ -660,9 +660,9 @@ $tmp->Headquarte<span class="fragment highlight-red" data-fragment-index="1">r</
                         </div>
 
                         <aside class="notes">
-                            Une variable mal nomée !<br />
-                            Pour info, php crée automatiquement un nouveau tableau<br />
-                            sous la variable `$getAnArray`
+                            <span data-trans-en="A wrongly named variable">Une variable mal nomée !</span><br />
+                            <span data-trans-en="For the record, PHP automatically creates a new array">Pour info, php crée automatiquement un nouveau tableau</span><br />
+                            <span data-trans-en="under the variable `$getAnArray`">sous la variable `$getAnArray`</span>
                         </aside>
                     </section>
                 </section>
@@ -688,7 +688,7 @@ function doStuff(array $anArrayOfInt) {
                             Parameter #1 $str of function strtoupper expects string, int given.
                         </div>
 
-                        <aside class="notes">
+                        <aside class="notes" data-trans-en="docstring allow us to give more details than the language itself">
                             La docstring permet de donner plus de détail que le language ne sait pas traiter
                         </aside>
                     </section>
@@ -705,11 +705,10 @@ function doStuff($var) {
     $var = $var->toArray();
   }
   
-  // `$var` sera reconnu comme un tableau de int
-  <!--// `$var` will be known  as an array of int-->
+  // `$var` <span data-trans-en="will be known  as an array of int">sera reconnu comme un tableau de int</span>
 }</code></pre>
 
-                        <aside class="notes">
+                        <aside class="notes" data-trans-en="Or manage different types">
                             Ou bien même de gérer des types différents
                         </aside>
                     </section>
@@ -724,7 +723,7 @@ function doStuff($var) {
 class UserFactory implements Factory {
     function make(): User;
 }</code></pre>
-                        <h5>En attendant</h5>
+                        <h5 data-trans-en="until then">En attendant</h5>
                         <pre><code class="hljs php" data-trim data-noescape>class UserFactory implements Factory {
     /**
      * @return User
@@ -739,8 +738,12 @@ class UserFactory implements Factory {
                         </a>
 
                         <aside class="notes">
-                            Covariance : type de retour plus précis (User &gt; object)<br />
-                            Contravariance : paramètre d'entrée plus "large" que celui de l'interface
+                            <span data-trans-en="Covariance: more precise return types">
+                                Covariance : type de retour plus précis (User &gt; object)
+                            </span><br />
+                            <span data-trans-en="Contravariance : function parameter less abstract than the interface one">
+                                Contravariance : paramètre d'entrée plus "large" que celui de l'interface
+                            </span>
                         </aside>
                     </section>
                 </section>
@@ -751,11 +754,11 @@ class UserFactory implements Factory {
                         data-background-size="cover"
                         data-background-opacity="0.3"
                     >
-                        <h2>
+                        <h2 data-trans-en="Progressive validation">
                             Validation graduelle
                         </h2>
 
-                        <h5>
+                        <h5 data-trans-en="From level 0 to 7 + additionnal rules">
                             Niveau de 0 à 7 + règles additionelles
                         </h5>
                     </section>
@@ -765,13 +768,17 @@ class UserFactory implements Factory {
                         data-background-size="cover"
                         data-background-opacity="0.3"
                     >
-                        <h2>
+                        <h2 data-trans-en="PHPStan is fast">
                             PHPStan est rapide
                         </h2>
 
-                        <h5>
+                        <h5 data-trans-en="700 files in 30 seconds">
                             700 fichiers en 30 secondes
                         </h5>
+
+                        <aside class="notes" data-trans-en="In comparaison, our test stack took 15 minutes">
+                            En comparaison, notre suite de tests prend 15 minutes
+                        </aside>
                     </section>
 
                     <section
@@ -779,14 +786,14 @@ class UserFactory implements Factory {
                         data-background-size="cover"
                         data-background-opacity="0.3"
                     >
-                        <h5>
+                        <h5 data-trans-en="Nothing to do, except write and document (properly) your code">
                             Rien à faire de plus que d'écrire et (bien) documenter votre code
                         </h5>
                     </section>
                 </section>
 
                 <section id="concurrents">
-                    <h2>Concurrence ?</h2>
+                    <h2 data-trans-en="Competitors?">Concurrence ?</h2>
                     <p>
                         <img data-src="/images/GitHub-Mark.png" width="50px" class="image-like-text" />
                         <a href="https://github.com/phan/phan" rel="noopener noreferer" target="_blank">
@@ -801,22 +808,26 @@ class UserFactory implements Factory {
                         </a>
                     </p>
 
-                    <h5>
+                    <h5 data-trans-en="Which one should I use?">
                         Lequel utiliser ?
                     </h5>
                     <p>
                         <a href="https://badootech.badoo.com/php-code-static-analysis-based-on-the-example-of-phpstan-phan-and-psalm-a20654c4011d"
                             rel="noopener noreferer"
                             target="_blank"
+                            data-trans-en="Comparison from Badoo tech"
                         >
                             Comparatif par Badoo tech
                         </a>
                     </p>
 
                         <aside class="notes">
-                            <li>PHPStan : rapide, simple, fonctionne bien avec Doctrine, Symfony, etc.
-                            <li>Phan : très efficace, mais peut donner des faux positifs, parse toute la base de code
-                            <li>Psalm : Typage avancé (types "generiques")
+                            <li data-trans-en="PHPStan: fast, imple, works with Doctrine, Symfony, etc.">
+                                PHPStan : rapide, simple, fonctionne bien avec Doctrine, Symfony, etc.
+                            <li data-trans-en="Phan: really efficient, but can give false positive, parse all the code base">
+                                Phan : très efficace, mais peut donner des faux positifs, parse toute la base de code
+                            <li data-trans-en="Psalm: advance types (generics)">
+                                Psalm : Typage avancé (types "generiques")
                         </aside>
                 </section>
 
@@ -826,31 +837,41 @@ class UserFactory implements Factory {
                         data-background-size="cover"
                         data-background-opacity="0.3"
                     >
-                        <h1>
+                        <h1 data-trans-en="Quotes">
                             Citations
                         </h1>
-                        <div>
+                        <div data-trans-en="(from my colleagues)">
                             (De mes collègues)
                         </div>
                     </section>
 
                     <section>
                         <blockquote>
+                            <span data-trans-en="At the beginning, I felt both frustrated and really interested. […]  Stan did regularly force me to face my own mistakes.">
                             Au début, j’ai ressenti un mélange de frustration et de grand intérêt. […] Stan me mets régulièrement face à mes manquements.
+                            </span>
                             <div class="author">Thomas</div>
                         </blockquote>
                     </section>
                     <section>
                         <blockquote>
-                            …un peu contraignant mais si on pèse le pour et le contre ça en vaut le détour. <br />
-                            L'investissement valait le coup, le code est plus propre…
+                            <span data-trans-en="…a little constraining but weighting the pros and the cons, it was worth it.">
+                                …un peu contraignant mais si on pèse le pour et le contre ça en vaut le détour.
+                            </span><br />
+                            <span data-trans-en="The time invested was not lost, the code is cleaner now…">
+                                L'investissement valait le coup, le code est plus propre…
+                            </span>
                             <div class="author">Sylvère</div>
                         </blockquote>
                     </section>
                     <section>
                         <blockquote>
-                            … chiant au début quand on connait pas […] un peu comme quand tu découvres les tests :<br />
-                            puis quelques mois après tu lances des deploy en sirotant un petit kir cassis…
+                            <span data-trans-en="…bitchy at start when you don't know […] like when you discover the tests: ">
+                                … chiant au début quand on connait pas […] un peu comme quand tu découvres les tests :
+                            </span><br />
+                            <span data-trans-en='but after several months you deploy you code drinking a little blackcurrant "kir"'>
+                                puis quelques mois après tu lances des deploy en sirotant un petit kir cassis…
+                            </span>
                             <div class="author">Dimitri</div>
                         </blockquote>
                     </section>
@@ -861,9 +882,12 @@ class UserFactory implements Factory {
                         data-background-size="cover"
                         data-background-opacity="0.3"
                 >
-                    <h2>
-                        Des questions ?
+                    <h2 data-trans-en="Thank you!">
+                        Merci !
                     </h2>
+                    <h3 data-trans-en="Questions?">
+                        Des questions ?
+                    </h3>
                 </section>
             </div>
         </div>
