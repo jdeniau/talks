@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <title>Analyse statique avec PHPStan</title>
+        <link rel="icon" type="image/png" href="favicon.png" />
 
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/white.css">
@@ -40,6 +41,14 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <h2 data-trans-en="Explore your code with static analysis">
                         Explorez votre code avec de l'analyse statique
                     </h2>
+
+                    <p>
+                        <a href="http://jdeniau.github.io/talks/"
+                           target="_blank"
+                           rel="noopener noreferer">
+                            🔗 http://julien.deniau.me/phpstan
+                        </a>
+                    </p>
                 </section>
 
                 <section>
@@ -964,10 +973,10 @@ Reveal.initialize({
             }
         },
         {
-            src: 'node_modules/twemoji/2/twemoji.min.js',
+            src: 'plugin/twemoji/2/twemoji.min.js',
             async: true,
             callback: function() {
-                twemoji.base = './node_modules/twemoji/2/';
+                twemoji.base = './plugin/twemoji/2/';
                 twemoji.ext = '.svg';
                 twemoji.size = 'svg';
                 twemoji.parse(document.body);
