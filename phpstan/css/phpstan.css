@@ -37,6 +37,10 @@ img.emoji  {
 .image-like-text {
     display: inline-block!important;
     vertical-align: middle!important;
+    border: none!important;
+    box-shadow: none!important;
+    background: none!important;
+    margin-right: 15px!important;
 }
 
 .reveal .success {
@@ -79,4 +83,8 @@ blockquote .author {
     text-align: right;
     color: #777;
     font-size: .8em;
+}
+
+.footer {
+    margin-top: 50px!important;
 }
