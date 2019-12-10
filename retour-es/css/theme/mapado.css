@@ -4,57 +4,57 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 @font-face {
   font-family: 'Roboto slab';
-  src: url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.eot");
-  src: url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.eot?#iefix") format("embedded-opentype"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.woff2") format("woff2"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.woff") format("woff"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.ttf") format("truetype"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.svg#roboto_slablight") format("svg");
+  src: url("/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.eot");
+  src: url("/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.eot?#iefix") format("embedded-opentype"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.woff2") format("woff2"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.woff") format("woff"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.ttf") format("truetype"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-light-webfont.svg#roboto_slablight") format("svg");
   font-weight: lighter;
   font-style: normal; }
 @font-face {
   font-family: 'Roboto slab';
-  src: url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.eot");
-  src: url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.woff2") format("woff2"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.woff") format("woff"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.ttf") format("truetype"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.svg#roboto_slabregular") format("svg");
+  src: url("/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.eot");
+  src: url("/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.woff2") format("woff2"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.woff") format("woff"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.ttf") format("truetype"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-regular-webfont.svg#roboto_slabregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Roboto slab';
-  src: url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.eot");
-  src: url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.woff2") format("woff2"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.woff") format("woff"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.ttf") format("truetype"), url("/talks/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.svg#roboto_slabbold") format("svg");
+  src: url("/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.eot");
+  src: url("/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.woff2") format("woff2"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.woff") format("woff"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.ttf") format("truetype"), url("/dev-ux/assets/fonts/roboto-slab/robotoslab-bold-webfont.svg#roboto_slabbold") format("svg");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.eot");
-  src: url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.woff2") format("woff2"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.woff") format("woff"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.ttf") format("truetype"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.svg#proxima_novalight") format("svg");
+  src: url("/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.eot");
+  src: url("/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.woff2") format("woff2"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.woff") format("woff"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.ttf") format("truetype"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-light-webfont.svg#proxima_novalight") format("svg");
   font-weight: lighter;
   font-style: normal; }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.eot");
-  src: url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.woff2") format("woff2"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.woff") format("woff"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.ttf") format("truetype"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.svg#proxima_nova_rgregular") format("svg");
+  src: url("/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.eot");
+  src: url("/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.woff2") format("woff2"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.woff") format("woff"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.ttf") format("truetype"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-regular-webfont.svg#proxima_nova_rgregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.eot");
-  src: url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.woff2") format("woff2"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.woff") format("woff"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.ttf") format("truetype"), url("/talks/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.svg#proxima_nova_rgbold") format("svg");
+  src: url("/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.eot");
+  src: url("/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.woff2") format("woff2"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.woff") format("woff"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.ttf") format("truetype"), url("/dev-ux/assets/fonts/proxima-nova/proximanova-bold-webfont.svg#proxima_nova_rgbold") format("svg");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'Lato';
-  src: url("/talks/dev-ux/assets/fonts/lato/lato-regular-webfont.eot");
-  src: url("/talks/dev-ux/assets/fonts/lato/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/talks/dev-ux/assets/fonts/lato/lato-regular-webfont.woff2") format("woff2"), url("/talks/dev-ux/assets/fonts/lato/lato-regular-webfont.woff") format("woff"), url("/talks/dev-ux/assets/fonts/lato/lato-regular-webfont.ttf") format("truetype"), url("/talks/dev-ux/assets/fonts/lato/lato-regular-webfont.svg#proxima_nova_rgregular") format("svg");
+  src: url("/dev-ux/assets/fonts/lato/lato-regular-webfont.eot");
+  src: url("/dev-ux/assets/fonts/lato/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/dev-ux/assets/fonts/lato/lato-regular-webfont.woff2") format("woff2"), url("/dev-ux/assets/fonts/lato/lato-regular-webfont.woff") format("woff"), url("/dev-ux/assets/fonts/lato/lato-regular-webfont.ttf") format("truetype"), url("/dev-ux/assets/fonts/lato/lato-regular-webfont.svg#proxima_nova_rgregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Lato';
-  src: url("/talks/dev-ux/assets/fonts/lato/lato-italic-webfont.eot");
-  src: url("/talks/dev-ux/assets/fonts/lato/lato-italic-webfont.eot?#iefix") format("embedded-opentype"), url("/talks/dev-ux/assets/fonts/lato/lato-italic-webfont.woff2") format("woff2"), url("/talks/dev-ux/assets/fonts/lato/lato-italic-webfont.woff") format("woff"), url("/talks/dev-ux/assets/fonts/lato/lato-italic-webfont.ttf") format("truetype"), url("/talks/dev-ux/assets/fonts/lato/lato-italic-webfont.svg#proxima_nova_rgregular") format("svg");
+  src: url("/dev-ux/assets/fonts/lato/lato-italic-webfont.eot");
+  src: url("/dev-ux/assets/fonts/lato/lato-italic-webfont.eot?#iefix") format("embedded-opentype"), url("/dev-ux/assets/fonts/lato/lato-italic-webfont.woff2") format("woff2"), url("/dev-ux/assets/fonts/lato/lato-italic-webfont.woff") format("woff"), url("/dev-ux/assets/fonts/lato/lato-italic-webfont.ttf") format("truetype"), url("/dev-ux/assets/fonts/lato/lato-italic-webfont.svg#proxima_nova_rgregular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-style: italic; }
 @font-face {
   font-family: 'Lato';
-  src: url("/talks/dev-ux/assets/fonts/lato/lato-bold-webfont.eot");
-  src: url("/talks/dev-ux/assets/fonts/lato/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/talks/dev-ux/assets/fonts/lato/lato-bold-webfont.woff2") format("woff2"), url("/talks/dev-ux/assets/fonts/lato/lato-bold-webfont.woff") format("woff"), url("/talks/dev-ux/assets/fonts/lato/lato-bold-webfont.ttf") format("truetype"), url("/talks/dev-ux/assets/fonts/lato/lato-bold-webfont.svg#proxima_nova_rgregular") format("svg");
+  src: url("/dev-ux/assets/fonts/lato/lato-bold-webfont.eot");
+  src: url("/dev-ux/assets/fonts/lato/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/dev-ux/assets/fonts/lato/lato-bold-webfont.woff2") format("woff2"), url("/dev-ux/assets/fonts/lato/lato-bold-webfont.woff") format("woff"), url("/dev-ux/assets/fonts/lato/lato-bold-webfont.ttf") format("truetype"), url("/dev-ux/assets/fonts/lato/lato-bold-webfont.svg#proxima_nova_rgregular") format("svg");
   font-weight: bold;
   font-style: normal; }
 .reveal a:not(.image) {
@@ -86,13 +86,13 @@
   .classpasclass.coupled:last-child {
     background-position: calc(50% + 250px) center; }
   .classpasclass.perfect {
-    background-image: url(/talks/dev-ux/assets/img/pad/perfect.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(/dev-ux/assets/img/pad/perfect.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.class {
-    background-image: url(/talks/dev-ux/assets/img/pad/boss.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(/dev-ux/assets/img/pad/boss.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.pasclass {
-    background-image: url(/talks/dev-ux/assets/img/pad/nope.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(/dev-ux/assets/img/pad/nope.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
   .classpasclass.vraimentpasclass {
-    background-image: url(/talks/dev-ux/assets/img/pad/what.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
+    background-image: url(/dev-ux/assets/img/pad/what.png), radial-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 90%); }
 
 .reveal table th, .reveal table td {
   text-align: left;
