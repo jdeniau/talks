@@ -607,7 +607,17 @@
           { src: "plugin/markdown/marked.js" },
           { src: "plugin/markdown/markdown.js" },
           { src: "plugin/highlight/highlight.js" },
-          { src: "plugin/notes/notes.js", async: true }
+          { src: "plugin/notes/notes.js", async: true },
+          {
+              src: 'plugin/twemoji/2/twemoji.min.js',
+              async: true,
+              callback: function() {
+                  twemoji.base = './plugin/twemoji/2/';
+                  twemoji.ext = '.svg';
+                  twemoji.size = 'svg';
+                  twemoji.parse(document.body);
+              },
+          },
         ]
       });
     </script>

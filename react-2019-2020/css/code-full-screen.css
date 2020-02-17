@@ -2,8 +2,10 @@
   max-height: 600px;
 }
 
-.reveal section img.ext-emoji {
-  margin: 0;
-  border: none;
-  box-shadow: none;
+.reveal img.emoji {
+    width: 1em!important;
+    margin: 0!important;
+    background: none!important;
+    border: none!important;
+    box-shadow: none!important;
 }
