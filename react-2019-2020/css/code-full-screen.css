@@ -1,0 +1,9 @@
+.reveal pre code {
+  max-height: 600px;
+}
+
+.reveal section img.ext-emoji {
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
